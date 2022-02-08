@@ -1,1 +1,2 @@
 # Programmieren_lernen_2021
+Wir lernen Programmieren mit der Programmiersprache Python und der Entwicklungsumgebung IDLE. Beide sind für die Lehre entwickelt worden. Wir beginnen mit den Grundlagen und dem Test. Dann lernen wir die Programmierung von grafischen Benutzerschnittstellen kennen (tkinter und Turtle). Weitere Themen sind der Umgang mit Dateien und die objektorientierte Programmierung. Wir zeigen die Anwendung mit einfachen Computerspielen. Zu jedem Thema gibt es Aufgaben, die selbstständig gelöst werden sollen.  
