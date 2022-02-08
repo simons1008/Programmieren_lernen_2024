@@ -1,4 +1,4 @@
-# Zeichne ein Quadrat
+# Zeichne ein Sechseck
 
 # Modul für die Turtle-Grafik importieren
 from turtle import *
@@ -15,12 +15,10 @@ width(3)
 # Stiftfarbe setzen
 color("green")
 
-# Quadrat
-for i in range(4):
+# Sechseck
+for i in range(6):
     forward(100)
-    left(90)
+    left(60)
 
 # Hauptschleife, damit die Turtle-Grafik angezeigt wird
 screen.mainloop()
-
-
