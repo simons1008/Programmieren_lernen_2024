@@ -1,3 +1,5 @@
+# Quelle: http://www.coding4you.at/python/turtle.html
+
 from turtle import Screen, Turtle
 
 def motion(event):
