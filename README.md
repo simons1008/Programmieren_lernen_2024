@@ -1,14 +1,40 @@
-# Programmieren_lernen_2021
+# Programmieren lernen mit Python IDLE
 
-"Programmieren lernen mit Python IDLE" richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
-Jeder neue Inhalt wird vom Lehrer mit Worten eingeführt und mit Programmcode demonstriert. Anschließend testen die Schülerinnen und Schüler das Gelernte am eigenen PC. Es werden Aufgaben gestellt, die selbstständig gelöst werden sollen. Es gibt eine Zusammenfassung der Lektion jedes Tages. 
+Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
 
-Kursinhalt: 		Doc/Inhalt_Programmierkurs.pdf
-Aufgaben:			Doc/Aufgaben_2021.pdf
-Zusammenfassung: 	Doc/Programmieren_lernen_2021.pdf
+## Typischer Ablauf einer Lektion
+1. Der Lehrer erläutert das neue Thema und demonstriert den Programmcode auf seinem PC. 
+2. Die Schülerinnen und Schüler experimentieren mit dem Programmcode auf ihren PCs. 
+3. Es wird eine Zeit reserviert, in der selbstständig Aufgaben gelöst werden sollen.  
+4. Zum Schluss demonstriert der Lehrer ein Programm zum Thema, z. B. ein Computerspiel. 
 
-Der demonstrierte Programmcode und die Lösungen der Aufgaben befinden sich in Ordnern mit den Namen der Überschriften in der Zusammenfassung.  
-Beispiel:			SW/Grundlagen/Tag_5.1/volumentarif.py	  
+## Ordner Doc
 
-Alle Quellen des Kurses sind auf Seite 33 der Zusammenfassung genannt. Für die Nutzung der Inhalte von Programmieren_lernen_2021 gelten Lizenzen. 
-Lizenzübersicht:	Lic/Lizenz_Uebersicht.pdf
+| Inhalt                        | Datei .docx .pdf                               |
+| ----------------------------- | ---------------------------------------------- |
+| Inhaltsübersicht 	            | Doc/Inhalt_Programmierkurs                     |
+| Zusammenfassung der Lektionen | Doc/Programmieren_lernen_2021                  |
+| Aufgaben			            | Doc/Aufgaben_2021                              |
+| Anleitungen                   | Doc/Dateipfad_aendern und /pygame_installieren |
+
+> Die Zusammenfassung der Lektionen nennt auf Seite 33 alle Quellen des Kurses.
+
+## Ordner SW
+
+| Inhalt                           | Ordner                           |
+| -------------------------------- | -------------------------------- |
+| Grundlagen                       | SW/Grundlagen/Tag_1 bis /Tag_5.2 |
+| Graphical User Interface         | SW/GUI/Tag_6 bis /Tag_6.1        |
+| Turtle                           | SW/Turtle/Tag_7                  |
+| Datei lesen und schreiben        | SW/Datei_lesen_schreiben/Tag_8   |
+| Objektorientierte Programmierung | SW/OOP/Tag_9 bis Tag_10          | 
+| Für den Lehrer                   | SW/Lehrer                        |
+
+## Ordner Lic
+
+| Inhalt          | Datei .docx .pdf      |
+| --------------- | --------------------- |
+| Lizenzübersicht |	Lic/Lizenz_Uebersicht |
+
+> Die Nutzung der Dateien im Repository ist durch Lizenzen geregelt. 
+
