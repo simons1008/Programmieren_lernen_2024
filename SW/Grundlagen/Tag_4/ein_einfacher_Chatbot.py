@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Ein einfacher Chatbot (chatten mit dem Computer)
 
 # Modul für den Zufall importieren
