@@ -37,5 +37,5 @@ Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkennt
 | --------------- | --------------------- |
 | Lizenzübersicht |	Lic/Lizenz_Uebersicht |
 
-> Die Nutzung der Dateien im Repository ist durch Lizenzen geregelt. 
+> Die Lizenzübersicht nennt den Urheber jeder Datei im Repository und die anwendbaren Lizenzen - soweit bekannt. 
 
