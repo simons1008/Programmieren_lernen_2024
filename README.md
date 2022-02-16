@@ -2,7 +2,7 @@
 
 Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
 
-## Typischer Ablauf einer Lektion
+## Typischer Ablauf einer Kurseinheit
 1. Der Lehrer erläutert das neue Thema und demonstriert den Programmcode auf seinem PC. 
 2. Die Schülerinnen und Schüler experimentieren mit dem Programmcode auf ihren PCs. 
 3. Es wird eine Zeit reserviert, in der selbstständig Aufgaben gelöst werden sollen.  
@@ -10,14 +10,14 @@ Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkennt
 
 ## Ordner Doc
 
-| Inhalt                        | Datei .docx .pdf                               |
-| ----------------------------- | ---------------------------------------------- |
-| Inhaltsübersicht 	            | Doc/Inhalt_Programmierkurs                     |
-| Zusammenfassung der Lektionen | Doc/Programmieren_lernen_2021                  |
-| Aufgaben			            | Doc/Aufgaben_2021                              |
-| Anleitungen                   | Doc/Dateipfad_aendern und /pygame_installieren |
+| Inhalt                            | Datei .docx .pdf                               |
+| --------------------------------- | ---------------------------------------------- |
+| Inhaltsübersicht 	                | Doc/Inhalt_Programmierkurs                     |
+| Zusammenfassung der Kursinhalte   | Doc/Programmieren_lernen_2021                  |
+| Aufgaben		                    | Doc/Aufgaben_2021                              |
+| Anleitungen                       | Doc/Dateipfad_aendern und /pygame_installieren |
 
-> Die Zusammenfassung der Lektionen nennt auf Seite 33 alle Quellen des Kurses.
+> Die Zusammenfassung der Kursinhalte nennt auf Seite 33 alle Quellen des Kurses.
 
 ## Ordner SW
 
