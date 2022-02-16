@@ -1,6 +1,6 @@
 # Programmieren lernen mit Python IDLE
 
-Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
+Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
 
 ## Typischer Ablauf einer Kurseinheit
 1. Der Lehrer erläutert das neue Thema und demonstriert den Programmcode auf seinem PC. 
@@ -31,11 +31,7 @@ Dieser Kurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkennt
 | Bibliothek pygame                | SW/OOP/Tag_10                    | 
 | Für den Lehrer                   | SW/Lehrer                        |
 
-## Ordner Lic
+## Lizenz
 
-| Inhalt          | Datei .docx .pdf      |
-| --------------- | --------------------- |
-| Lizenzübersicht |	Lic/Lizenz_Uebersicht |
-
-> Die Lizenzübersicht nennt den Urheber jeder Datei im Repository und die anwendbaren Lizenzen - soweit bekannt. 
+> Dieser Programmierkurs ist lizensiert unter der Creative-Commons-Lizenz [Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
 
