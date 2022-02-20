@@ -19,7 +19,7 @@ print(mein_text)
 
 # Version mit dem Befehl with. Dadurch wird die Datei automatisch geschlossen. 
 # Datei öffnen, lesen und schließen
-with open("textdatei_utf_8.txt", encoding="utf-8") as datei:
+with open("textdatei.txt") as datei:
     mein_text = datei.read()
 
 # Inhalt der Datei ausgeben
