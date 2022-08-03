@@ -3,7 +3,7 @@
 # Benutzereingabe anfordern
 zahl = input("Gib eine Zahl ein ")
 
-# String in Integer umwandeln
+# String in Dezimalzahl umwandeln
 zahl = float(zahl)
 
 # Quadrat ausgeben
