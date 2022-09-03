@@ -13,8 +13,8 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (b
 | Inhalt                            | Datei .docx .pdf                               |
 | --------------------------------- | ---------------------------------------------- |
 | Inhaltsübersicht 	                | Doc/Inhalt_Programmierkurs                     |
-| Zusammenfassung der Kursinhalte   | Doc/Programmieren_lernen_2021                  |
-| Aufgaben		                    | Doc/Aufgaben_2021                              |
+| Zusammenfassung der Kursinhalte   | Doc/Programmieren_lernen_2022                  |
+| Aufgaben		                    | Doc/Aufgaben_2022                              |
 | Anleitungen                       | Doc/Dateipfad_aendern und /pygame_installieren |
 
 > Die Zusammenfassung der Kursinhalte nennt auf Seite 33 alle Quellen des Kurses.
