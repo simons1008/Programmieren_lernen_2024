@@ -33,7 +33,7 @@ else:
 
 # Datei öffnen, lesen und schließen
 if ok:
-    with open("../../info.txt", encoding=parameter) as datei:
+    with open("../info.txt", encoding=parameter) as datei:
         mein_text = datei.read()
 
 # Inhalt der Datei ausgeben
