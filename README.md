@@ -17,19 +17,16 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (b
 | Aufgaben		                    | Doc/Aufgaben_2022                              |
 | Anleitungen                       | Doc/Dateipfad_aendern und /pygame_installieren |
 
-> Die Zusammenfassung der Kursinhalte nennt auf Seite 33 alle Quellen des Kurses.
+> Die Zusammenfassung der Kursinhalte nennt auf Seite 35 alle Quellen des Kurses.
 
 ## Ordner SW
 
-| Inhalt                           | Ordner                           |
-| -------------------------------- | -------------------------------- |
-| Grundlagen                       | SW/Grundlagen/Tag_1 bis /Tag_5.2 |
-| Graphical User Interface         | SW/GUI/Tag_6 bis /Tag_6.1        |
-| Turtle                           | SW/Turtle/Tag_7                  |
-| Datei lesen und schreiben        | SW/Datei_lesen_schreiben/Tag_8   |
-| Objektorientierte Programmierung | SW/OOP/Tag_9                     |
-| Bibliothek pygame                | SW/OOP/Tag_10                    | 
-| Für den Lehrer                   | SW/Lehrer                        |
+| Inhalt                           | Ordner                                          |
+| -------------------------------- | ------------------------------------------------|
+| Beispiele, Lösungen der Aufgaben | SW/3_Rechnen_mit_Zeichenketten_und_Zahlen       |
+|                                  | bis                                             |
+|                                  | SW/20_Bibliothek_pygame                         |
+| Für den Lehrer                   | SW/Lehrer                                       |
 
 ## Lizenz
 
