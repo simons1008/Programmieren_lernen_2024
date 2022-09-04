@@ -1,6 +1,12 @@
 # Modul für den Unittest importieren 
 import unittest
 
+# Modul mit Zugriff auf die Variable sys.path importieren
+import sys
+
+# Pfad der zu testenden Funktionen anhängen
+sys.path.append("../10_Formatierte_Ausgabe_und_Graphen_plotten")
+
 # zu testende Funktionen importieren
 import flatrate as flat
 import volumentarif as vol

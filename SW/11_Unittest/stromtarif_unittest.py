@@ -1,6 +1,12 @@
 # Modul für den Unittest importieren 
 import unittest
 
+# Modul mit Zugriff auf die Variable sys.path importieren
+import sys
+
+# Pfad der zu testenden Funktionen anhängen
+sys.path.append("../9_Funktionen")
+
 # zu testende Funktionen importieren
 import watt_fuer_wenig
 import billig_strom
