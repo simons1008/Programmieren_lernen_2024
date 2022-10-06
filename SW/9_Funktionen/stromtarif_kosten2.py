@@ -10,14 +10,14 @@ def stromtarif_kosten(grundgebuehr: float,
 
 # Ergebnisse berechnen
 # Listen initialisieren
-verbrauch = range(0, 300, 50)
+verbrauch = range(0, 150, 10)
 kosten1 = []
 kosten2 = []
 
 # Listen mit den Kosten der beiden Tarife erstellen
 for x in verbrauch:
-    kosten1.append(stromtarif_kosten(8.2, 0.16, x)) # Tarif Watt für wenig
-    kosten2.append(stromtarif_kosten(4.9, 0.19, x)) # Tarif Billig-Strom
+    kosten1.append(stromtarif_kosten(13.5, 0.75, x)) # Tarif Watt für wenig
+    kosten2.append(stromtarif_kosten(9.2, 0.81, x)) # Tarif Billig-Strom
 
 # Ergebnisse drucken
 print(" Verbrauch  Watt für wenig  Billig-Strom")

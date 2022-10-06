@@ -3,18 +3,18 @@
 # monatliche Kosten für Tarif Watt für wenig berechnen
 # Funktion mit Datentyp
 def watt_fuer_wenig(verbrauch: float) -> float:
-    kosten = 8.2 + verbrauch * 0.16
+    kosten = 13.5 + verbrauch * 0.75
     return kosten
 
 # monatliche Kosten für Tarif Billig-Strom berechnen
 # Funktion mit Datentyp
 def billig_strom(verbrauch: float) -> float:
-    kosten = 4.9 + verbrauch * 0.19
+    kosten = 9.2 + verbrauch * 0.81
     return kosten
 
 # Ergebnisse berechnen
 # Listen initialisieren
-verbrauch = range(0, 300, 50)
+verbrauch = range(0, 150, 10)
 kosten1 = []
 kosten2 = []
 
