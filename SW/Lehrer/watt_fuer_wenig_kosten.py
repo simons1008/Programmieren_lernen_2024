@@ -2,11 +2,11 @@
 
 # Funktion mit Datentyp (Schritt 3 und Schritt 5)
 def watt_fuer_wenig(verbrauch: float) -> float:
-    kosten = 8.2 + verbrauch * 0.16
+    kosten = 13.5 + verbrauch * 0.75
     return kosten
 
 # Ergebnisse berechnen, Liste initialisieren (Ab hier: Schritt 6)
-verbrauch = range(0, 300, 50)
+verbrauch = range(0, 150, 10)
 kosten1 = []
 
 # Listen mit den Kosten des Tarifs erstellen
