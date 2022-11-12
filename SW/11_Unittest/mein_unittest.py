@@ -1,3 +1,8 @@
+# assertAlmostEqual() rundet auf 7 Nachkommastellen und vergleicht 
+# Diese Funktion ruft assertAlmostEqual mit zwei Dezimalzahlen auf
+# Dezimalzahl1 hat 7 Nachkommastellen -> FAIL
+# Dezimalzahl2 hat 8 Nachkommastellen -> PASS
+
 # Modul für den Unittest importieren 
 import unittest
 
