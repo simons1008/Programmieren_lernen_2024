@@ -1,7 +1,7 @@
 # Modul für den Unittest importieren 
 import unittest
 
-# zu testende Funktion importieren (oder einfügen)
+# zu testende Funktion einfügen
 def quersumme(ganzzahl: int) -> int:
     anzahl_h = ganzzahl // 100
     rest_h = ganzzahl % 100

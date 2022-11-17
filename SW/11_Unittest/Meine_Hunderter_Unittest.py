@@ -1,7 +1,7 @@
 # Modul für den Unittest importieren 
 import unittest
 
-# zu testende Funktion importieren (oder einfügen)
+# zu testende Funktion einfügen
 def hunderter(ganzzahl: int) -> int:
     anzahl = ganzzahl // 100
     return anzahl
