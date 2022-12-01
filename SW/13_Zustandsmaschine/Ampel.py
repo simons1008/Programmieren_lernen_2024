@@ -98,10 +98,11 @@ GRUEN.attach_transition(taste1_gedrueckt, GELB)
 GELB.attach_transition(taste1_gedrueckt, ROT)
 
 # Übergänge durch Timer
-##ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
-##ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
-##GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
-##GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
+ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
+ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
+GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
+GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
+KEINE.attach_transition(myTimer_1000.repeat_execution, ROT)
 
 # Übergänge nach KEINE
 ROT.attach_transition(taste2_gedrueckt, KEINE)
