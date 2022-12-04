@@ -2,8 +2,8 @@
 # Deshalb muss das Programm von der Eingabeaufforderung aus gestartet werden
 
 # Zustandsautomat zur Steuerung einer Ampel
-# Taste1 schaltet GRUEN - GELB - ROT - ROT/GELB - GRUEN
-# Taste2 schaltet die Ampel dunkel
+# Taste1 schaltet GELB_BLINKEN - ROT - ROT_GELB - GRUEN - GELB - ROT
+# Taste2 schaltet die Ampel auf GELB_BLINKEN
 # Einsatz der Bibliothek statemachine
 # Für die Aktionen der Tasten: Zeilen 101 bis 104 auskommentieren
 
@@ -15,7 +15,7 @@ from neotimer_win import *
 import msvcrt
 
 # Begrüßung
-print("Zustandsautomat mit zwei Zuständen. Zustandswechsel mit den Tasten 1 und 2")
+print("Zustandsautomat zur Steuerung einer Ampel. Zustandswechsel mit den Tasten 1 und 2")
 print("Abbruch mit der Taste q")
 print()
 
@@ -34,11 +34,12 @@ myTimer_5000 = Neotimer(5000)
 # Funktionen in den Zuständen
 # Bis zum Zustandswechsel wird die Funktion wiederholt aufgerufen
 # Einmaliger Aufruf durch Abfrage von state_machine.execute_once
-# Die Ampel ist grün
 # Ampel ist dunkel
-def keine():
+def gelb_blinken():
     if state_machine.execute_once:
-        print("Die Ampel ist dunkel")
+        print("Die Ampel blinkt gelb")
+    if mytimer_500.repeat_execution():
+        print("gelb_blinken() aufgerufen")
 
 # Die Ampel ist rot
 def rot():
@@ -50,11 +51,10 @@ def rot_gelb():
     if state_machine.execute_once:
         print("Die Ampel ist rot/gelb")
 
+# Die Ampel ist grün
 def gruen():
     if state_machine.execute_once:
         print("Die Ampel ist grün")
-    if mytimer_500.repeat_execution():
-        print("gruen() aufgerufen")
 
 # Die Ampel ist gelb
 def gelb():
@@ -84,7 +84,7 @@ def taste2_gedrueckt():
     
 # Zustände definieren
 # Initial ist der erste Zustand
-KEINE = state_machine.add_state(keine)
+GELB_BLINKEN = state_machine.add_state(gelb_blinken)
 ROT = state_machine.add_state(rot)
 ROT_GELB = state_machine.add_state(rot_gelb)
 GRUEN = state_machine.add_state(gruen)
@@ -92,26 +92,24 @@ GELB = state_machine.add_state(gelb)
 
 # Zustandsübergänge hinzufügen
 # Normale Übergänge
+GELB_BLINKEN.attach_transition(taste1_gedrueckt, ROT)
 ROT.attach_transition(taste1_gedrueckt, ROT_GELB)
 ROT_GELB.attach_transition(taste1_gedrueckt, GRUEN)
 GRUEN.attach_transition(taste1_gedrueckt, GELB)
 GELB.attach_transition(taste1_gedrueckt, ROT)
 
 # Übergänge durch Timer
-ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
-ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
-GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
-GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
-KEINE.attach_transition(myTimer_1000.repeat_execution, ROT)
+##GELB_BLINKEN.attach_transition(myTimer_1000.repeat_execution, ROT)
+##ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
+##ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
+##GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
+##GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
 
-# Übergänge nach KEINE
-ROT.attach_transition(taste2_gedrueckt, KEINE)
-ROT_GELB.attach_transition(taste2_gedrueckt, KEINE)
-GRUEN.attach_transition(taste2_gedrueckt, KEINE)
-GELB.attach_transition(taste2_gedrueckt, KEINE)
-
-# Übergang von KEINE
-KEINE.attach_transition(taste1_gedrueckt, ROT)
+# Übergänge nach GELB_BLINKEN
+ROT.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
+ROT_GELB.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
+GRUEN.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
+GELB.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
 
 # Loop
 while True:
