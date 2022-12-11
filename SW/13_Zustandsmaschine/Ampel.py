@@ -63,7 +63,7 @@ def gelb():
 
 # Tasten einlesen
 def taste_gedrueckt(zeichen):
-    global key_in
+    global key_in 
     # Taste gedrückt?
     if msvcrt.kbhit():
         # Ja: Zeichen einlesen
@@ -114,6 +114,7 @@ GELB.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
 # Loop
 while True:
     state_machine.run()
+    # key_in wird in der Funktion taste_gedrueckt() gesetzt 
     # Abbruch mit der Taste q
     if key_in == 'q':
         break   
