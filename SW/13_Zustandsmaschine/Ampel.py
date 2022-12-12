@@ -34,7 +34,7 @@ myTimer_5000 = Neotimer(5000)
 # Funktionen in den Zuständen
 # Bis zum Zustandswechsel wird die Funktion wiederholt aufgerufen
 # Einmaliger Aufruf durch Abfrage von state_machine.execute_once
-# Ampel ist dunkel
+# Ampel blinkt gelb
 def gelb_blinken():
     if state_machine.execute_once:
         print("Die Ampel blinkt gelb")
