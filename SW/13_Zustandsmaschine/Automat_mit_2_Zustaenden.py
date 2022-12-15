@@ -33,10 +33,6 @@ def state2():
     if state_machine.execute_once:
         print("Automat im Zustand 2")
 
-# Zustände definieren
-STATE1 = state_machine.add_state(state1)
-STATE2 = state_machine.add_state(state2)
-
 # Funktionen für Zustandsübergänge
 def taste_gedrueckt(zeichen):
     global key_in
@@ -46,6 +42,8 @@ def taste_gedrueckt(zeichen):
         key_in = msvcrt.getwch()
     # Taste für den Zustandsübergang?
     if key_in == zeichen:
+        # globale Variable zurücksetzen
+        key_in = ' '
         return True
     else:
         return False
@@ -56,6 +54,10 @@ def taste1_gedrueckt():
 def taste2_gedrueckt():
     return taste_gedrueckt('2')
     
+# Zustände definieren
+STATE1 = state_machine.add_state(state1)
+STATE2 = state_machine.add_state(state2)
+
 # Zustandsübergänge definieren
 STATE1.attach_transition(taste2_gedrueckt, STATE2)
 STATE2.attach_transition(taste1_gedrueckt, STATE1)
