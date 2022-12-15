@@ -23,19 +23,19 @@ key_in = ' '
 mytimer = Neotimer(500)
 
 # Funktionen in den Zuständen
-def state1_logic():
+def state1():
     if state_machine.execute_once:
         print("Automat im Zustand 1")
     if mytimer.repeat_execution():
         print("bei der Arbeit")
 
-def state2_logic():
+def state2():
     if state_machine.execute_once:
         print("Automat im Zustand 2")
 
 # Zustände definieren
-state1 = state_machine.add_state(state1_logic)
-state2 = state_machine.add_state(state2_logic)
+STATE1 = state_machine.add_state(state1)
+STATE2 = state_machine.add_state(state2)
 
 # Funktionen für Zustandsübergänge
 def taste_gedrueckt(zeichen):
@@ -57,8 +57,8 @@ def taste2_gedrueckt():
     return taste_gedrueckt('2')
     
 # Zustandsübergänge definieren
-state1.attach_transition(taste2_gedrueckt, state2)
-state2.attach_transition(taste1_gedrueckt, state1)
+STATE1.attach_transition(taste2_gedrueckt, STATE2)
+STATE2.attach_transition(taste1_gedrueckt, STATE1)
 
 # Main loop
 while True:
