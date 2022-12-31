@@ -1,3 +1,3 @@
 import - Suchpfad
 =================
-Beim Befehl import gibt man den Modulpfad nicht an. Der Interpreter sucht das Modul in einer Liste von Ordnern, die in der Variable sys.path steht. Dazu gehört auch ein packages Ordner. 
+Beim Befehl import gibt man den Modulpfad nicht an. Der Interpreter sucht das Modul in einer Liste von Ordnern, die in der Variable sys.path steht. Dazu gehört auch ein packages Ordner.  
