@@ -10,7 +10,7 @@ screen = Screen()
 width(3)
 
 # Strahlen zeichnen
-for i in range(10):
+for i in range(9):
     forward(150)
     backward(150)
     left(10)
