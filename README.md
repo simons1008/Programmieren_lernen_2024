@@ -1,6 +1,6 @@
 # Programmieren lernen mit Python IDLE
 
-Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8 (bei Vorkenntnissen in Scratch auch früher). 
+Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8. 
 
 ## Typischer Ablauf einer Kurseinheit
 1. Der Lehrer erläutert das neue Thema und demonstriert den Programmcode auf seinem PC. 
