@@ -1,10 +1,10 @@
 # Programm druckt die erkannten Zahlen als String und als Integer
 
 # Import der zu testenden Funktionen
-import mustererkennung as mu_er
+import mustererkennung
 
 # Funktion aufrufen
-antwort = mu_er.erkannte_zahlen(mu_er.muster, 5)
+antwort = mustererkennung.erkannte_zahlen(mustererkennung.muster, 5)
 print(antwort)
 
 # Antwort aufspalten
