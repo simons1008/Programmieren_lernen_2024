@@ -1,32 +1,35 @@
 # Vergleich der Muster von zwei 5x7 Matrizen
 
+# Ziffern bestehen aus Zeilen mit dem Symbol 
+# Schwarzer Kreis: U+25CF
+
 # Definition von Mustern
 eins = [
-"  ■  ",
-" ■■  ",
-"  ■  ",
-"  ■  ",
-"  ■  ",
-"  ■  ",
-" ■■■ "]
+"  ●  ",
+" ●●  ",
+"  ●  ",
+"  ●  ",
+"  ●  ",
+"  ●  ",
+" ●●● "]
 
 zwei = [
-" ■■■ ",
-"■   ■",
-"    ■",
-" ■■■ ",
-"■    ",
-"■    ",
-"■■■■■"]
+" ●●● ",
+"●   ●",
+"    ●",
+" ●●● ",
+"●    ",
+"●    ",
+"●●●●●"]
 
 drei = [
-" ■■■ ",
-"■   ■",
-"    ■",
-" ■■■ ",
-"    ■",
-"■   ■",
-" ■■■ "]
+" ●●● ",
+"●   ●",
+"    ●",
+" ●●● ",
+"    ●",
+"●   ●",
+" ●●● "]
 
 # Funktion zählt die passenden Zeilen der Muster
 def passende_zeilen(muster1: list[str], muster2: list[str]) -> int:
@@ -62,13 +65,13 @@ def erkannte_zahlen(muster: list[str], minimum: int) -> str:
 
 # Muster zum Test der Funktion
 muster = [
-" ■■■ ",
-"■   ■",
-"    ■",
-" ■■■ ",
+" ●●● ",
+"●   ●",
+"    ●",
+" ●●● ",
 "     ",
-"■    ",
-"■■■■■"]
+"●    ",
+"●●●●●"]
 
 # Funktion aufrufen
 antwort = erkannte_zahlen(muster, 5)
