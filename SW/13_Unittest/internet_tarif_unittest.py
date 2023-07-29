@@ -5,7 +5,7 @@ import unittest
 import sys
 
 # Pfad der zu testenden Funktionen anhängen
-sys.path.append("../10_Formatierte_Ausgabe_und_Graphen_plotten")
+sys.path.append("../10_Funktionen_konstruieren")
 
 # zu testende Funktionen importieren
 import flatrate as flat
