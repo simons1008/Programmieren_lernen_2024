@@ -23,7 +23,7 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8.
 
 | Inhalt                           | Ordner                                          |
 | -------------------------------- | ------------------------------------------------|
-| Beispiele, Lösungen der Aufgaben | SW/3_Rechnen_mit_Zeichenketten_und_Zahlen       |
+| Beispiele, Lösungen der Aufgaben | SW/03_Rechnen_mit_Zeichenketten_und_Zahlen      |
 |                                  | bis                                             |
 |                                  | SW/22_KI_Mustererkennung                        |
 | Für den Lehrer                   | SW/Lehrer                                       |
