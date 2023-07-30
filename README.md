@@ -13,11 +13,11 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8.
 | Inhalt                            | Datei .docx .pdf                               |
 | --------------------------------- | ---------------------------------------------- |
 | Inhaltsübersicht 	                | Doc/Inhalt_Programmierkurs                     |
-| Zusammenfassung der Kursinhalte   | Doc/Programmieren_lernen_2022                  |
-| Aufgaben		                    | Doc/Aufgaben_2022                              |
+| Handbuch                          | Doc/Programmieren_lernen_2023                  |
+| Aufgaben		                    | Doc/Aufgaben_2023                              |
 | Anleitungen                       | Doc/Dateipfad_aendern und /pygame_installieren |
 
-> Die Zusammenfassung der Kursinhalte nennt auf Seite 35 alle Quellen des Kurses.
+> Das Handbuch nennt auf der letzten Seite alle Quellen des Kurses.
 
 ## Ordner SW
 
@@ -25,7 +25,7 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8.
 | -------------------------------- | ------------------------------------------------|
 | Beispiele, Lösungen der Aufgaben | SW/3_Rechnen_mit_Zeichenketten_und_Zahlen       |
 |                                  | bis                                             |
-|                                  | SW/20_Bibliothek_pygame                         |
+|                                  | SW/22_KI_Mustererkennung                        |
 | Für den Lehrer                   | SW/Lehrer                                       |
 
 ## Lizenz
