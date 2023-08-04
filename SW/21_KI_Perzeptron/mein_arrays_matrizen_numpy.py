@@ -19,6 +19,7 @@ print("Ein Dictionary-Eintrag")
 print(data['groesse'])
 
 # Daten in numpy-Array speichern
+# Features als Zeilen gespeichert
 feature = np.array([data['beine'], data['groesse'], data['breite']])
 
 # numpy-Array ausgeben
