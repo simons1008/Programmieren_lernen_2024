@@ -65,8 +65,8 @@ label = np.concatenate((np.ones(21), np.zeros(22)))
 # Scatter Plot ausgeben
 # Sind die Daten Hund - Nicht Hund durch eine Linie separierbar?
 plt.title("Trainingsdaten")
-plt.xlabel("Größe in cm")
-plt.ylabel("Breite in cm")
+plt.xlabel("Anzahl der Beine")
+plt.ylabel("Größe in cm")
 plt.scatter(feature[:, 0], feature[:, 1], c = label)
 plt.show()
 
@@ -81,5 +81,5 @@ plt.scatter(feature[:, 1], feature[:, 2], c = label)
 # Zwei Punkte durch eine Linie verbinden
 x0 = np.array([20, 45])
 x1 = np.array([25, 14])
-# plt.plot(x0, x1)
+plt.plot(x0, x1)
 plt.show()              
