@@ -7,7 +7,7 @@ def addiere_zu_liste(meine_liste: list[int], zahl: int):
     for i in range(len(meine_liste)):
         meine_liste[i] += zahl
 
-
+# Funktion mit Datentyp
 def multipliziere_mit_liste (meine_liste: list[int], zahl: int):
     for i in range (len(meine_liste)):
         meine_liste[i] *= zahl
