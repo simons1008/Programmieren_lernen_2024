@@ -83,3 +83,23 @@ x0 = np.array([20, 45])
 x1 = np.array([25, 14])
 plt.plot(x0, x1)
 plt.show()              
+
+# Daten skalieren
+skalierungsfaktor = np.max(feature, 0)
+feature /= skalierungsfaktor
+
+# Scatter Plot ausgeben
+# Sind die Daten Hund - Nicht Hund durch eine Linie separierbar?
+plt.title("Trainingsdaten")
+plt.xlabel("Größe auf "  + "{:4.2f}".format(skalierungsfaktor[1]) + " cm normiert")
+plt.ylabel("Breite auf " + "{:4.2f}".format(skalierungsfaktor[2]) + " cm normiert")
+plt.scatter(feature[:, 1], feature[:, 2], c = label)
+
+# Linie erstellen
+# Zwei Punkte durch eine Linie verbinden
+x0 = np.array([0.5, 1])
+x1 = np.array([1, 0.5])
+plt.plot(x0, x1)
+plt.show()              
+
+
