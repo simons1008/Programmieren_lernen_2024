@@ -1,6 +1,6 @@
 # Ändere den Inhalt einer Liste
 # ACHTUNG: Bei einer Liste wird die Referenz an die Funktion übergeben.
-#          Schreib-Operation in der Funktion ändern die Liste draußen! 
+#          Schreib-Operationen in der Funktion ändern die Liste draußen! 
 
 # Funktion mit Datentyp
 def addiere_zu_liste(meine_liste: list[int], zahl: int):
