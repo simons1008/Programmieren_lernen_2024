@@ -75,6 +75,7 @@ class Perzeptron:
         self.trainiert = False
         self.max_epochs = max_epochs
         self.fehler = np.zeros(max_epochs)
+        self.cnt = 0
 
     def perzeptron(self, x):
         if self.trainiert:
@@ -105,6 +106,7 @@ class Perzeptron:
             # wenn trainiert
             if self.fehler[cnt] == 0:
                 self.trainiert = True
+                self.cnt = cnt
                 break
             cnt += 1
         else:
@@ -147,6 +149,10 @@ if __name__ == "__main__":
     # gelernte Gewichte ausgeben
     print("gelernte Gewichte")
     print(perzeptron.w)
+
+    # Anzahl der Epochen ausgeben
+    print("Anzahl der Epochen")
+    print(perzeptron.cnt)
 
     # neues feature angeben
     # das neue feature wird vom Perzeptron skaliert
