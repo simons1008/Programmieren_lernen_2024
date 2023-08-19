@@ -86,6 +86,8 @@ plt.show()
 
 # Daten skalieren
 skalierungsfaktor = np.max(feature, 0)
+print("skalierungsfaktor")
+print(skalierungsfaktor)
 feature /= skalierungsfaktor
 
 # Scatter Plot ausgeben
