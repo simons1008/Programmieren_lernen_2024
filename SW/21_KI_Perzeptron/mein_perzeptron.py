@@ -113,9 +113,9 @@ def perzeptron(w, x):
         return 0
 
 # Perzeptron Lernregel
-# + - groesse zu w[0]
-# + - breite  zu w[1]
-# + - 1       zum Bias w[2]
+# +/- groesse zu w[0]
+# +/- breite  zu w[1]
+# +/- 1       zum Bias w[2]
 cnt = 0
 max_epochs = 100
 fehler = np.zeros(max_epochs)
