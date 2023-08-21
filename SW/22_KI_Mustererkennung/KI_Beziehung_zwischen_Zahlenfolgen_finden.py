@@ -1,5 +1,7 @@
 # KI Einführung - Beziehung zwischen zwei Zahlenfolgen finden
-# Quelle: Walter Stein https://steinphysik.de/download/272/
+#                 Modell exportieren
+# Quellen: Walter Stein https://steinphysik.de/download/272/
+#          https://www.tensorflow.org/guide/keras/serialization_and_saving
 
 # Library importieren
 from tensorflow import keras

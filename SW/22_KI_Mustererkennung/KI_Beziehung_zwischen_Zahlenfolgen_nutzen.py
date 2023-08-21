@@ -1,5 +1,7 @@
-# KI Einführung - Beziehung zwischen zwei Zahlenfolgen nutzen
-# Quelle: Walter Stein https://steinphysik.de/download/272/
+# KI Einführung - Modell laden
+#               - Modell nutzen, d. h. Voraussage machen
+# Quellen: Walter Stein https://steinphysik.de/download/272/
+#          https://www.tensorflow.org/guide/keras/serialization_and_saving
 
 # Library importieren
 from tensorflow import keras
