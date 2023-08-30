@@ -45,11 +45,11 @@ print(
 )
 
 # Einzelnes Sample vorhersagen - erfordert reshape
-predicted = clf.predict(X_test[15].reshape(1, -1))
+predicted = clf.predict(X_test[4].reshape(1, -1))
 
 # Vorhersage und Sollwert
 print("Vorhersage eines einzelnen Samples")
-print("Istwert: {:} Sollwert: {:}".format(predicted, y_test[15]))
+print("Istwert: {:} Sollwert: {:}".format(predicted, y_test[4]))
 
 # Testdaten speichern
 np.save("HSU_test_data.npy", X_test)
