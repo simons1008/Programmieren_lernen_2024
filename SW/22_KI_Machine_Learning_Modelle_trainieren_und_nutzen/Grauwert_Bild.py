@@ -10,10 +10,10 @@ import numpy as np
 from PIL import Image
 
 # Input:  Bild-Datei
-fp = 'H_0_rechts.png'
+fp = 'HSU_Ausschnitte\\H_0_rechts.png'
 
 # Output: numpy-Datei
-fp_np = 'H_0_rechts.npy'
+fp_np = 'HSU_Grauwert_Bilder\\H_0_rechts.npy'
 
 # Bild einlesen
 img = np.asarray(Image.open(fp))
