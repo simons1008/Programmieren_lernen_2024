@@ -126,7 +126,6 @@ while cnt < max_epochs:
         delta = label - perzeptron(w, x)
         if delta != 0:
             fehler[cnt] += 1
-            w_old = w.copy()
             w += delta * x
 
     if fehler[cnt] == 0:
