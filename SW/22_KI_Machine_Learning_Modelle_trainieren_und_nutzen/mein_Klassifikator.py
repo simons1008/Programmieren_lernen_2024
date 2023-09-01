@@ -38,7 +38,7 @@ print(y_test)
 # Fehler ausgeben
 print(predicted - y_test)
 
-# Erkennungsleistung für die gegebenen Testdaten und Testlabels ausgeben
+# Genauigkeit für die gegebenen Testdaten und Testlabels ausgeben
 print("Score: {:5.2f}".format(clf.score(X_test, y_test)))
 
 # Metrics Classification Report ausgeben
