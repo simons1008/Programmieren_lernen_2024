@@ -27,5 +27,8 @@ print(y_test)
 # Fehler ausgeben
 print(predicted - y_test)
 
+# Genauigkeit für die gegebenen Testdaten und Testlabels ausgeben
+print("Score: {:5.2f}".format(clf2.score(X_test, y_test)))
+
 # Ende
 input("Fertig?")
