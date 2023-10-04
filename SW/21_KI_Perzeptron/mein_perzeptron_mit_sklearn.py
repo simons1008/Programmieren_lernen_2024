@@ -77,16 +77,16 @@ def ticks_us():
 
 # Funktion berechnet die Differenz zwischen zwei Zeitstempeln    
 def ticks_diff(ticks1, ticks2):
-    return ticks1 - ticks2
+    return ticks2 - ticks1
 
 # Instanzen erstellen
 sk_perzeptron = Perceptron()
 perzeptron = Perzeptron(100)
 
 # Lernschritt aufrufen, Zeit messen
-ticks2 = ticks_us()
-perzeptron.lernschritt(feature, labels)
 ticks1 = ticks_us()
+perzeptron.lernschritt(feature, labels)
+ticks2 = ticks_us()
 print("Dauer von perzeptron.lernschritt:", ticks_diff(ticks1, ticks2), "Mikrosekunden")
 print("Gewichte")
 print(perzeptron.w)
@@ -96,9 +96,9 @@ print(perzeptron.cnt)
 
 # Fit aufrufen, Zeit messen
 # Die feature wurden durch den Aufruf perzeptron.lernschritt normalisiert
-ticks2 = ticks_us()
-sk_perzeptron.fit(feature, labels)
 ticks1 = ticks_us()
+sk_perzeptron.fit(feature, labels)
+ticks2 = ticks_us()
 print("Dauer von sk_perzeptron.fit:", ticks_diff(ticks1, ticks2), "Mikrosekunden")
 print("Weights assigned to the features")
 print(sk_perzeptron.coef_)
@@ -106,5 +106,5 @@ print("The actual number of iterations to reach the stopping criterion")
 print(sk_perzeptron.n_iter_)
 
 # Weiter?
-input("Weiter?")
+input("Weiter? ")
 
