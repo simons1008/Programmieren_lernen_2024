@@ -1,5 +1,11 @@
 # monatliche Kosten für Tarif Watt für wenig berechnen (Schritt 1)
 
+# Datenanalyse (Schritt  2)
+# Input der Funktion ist der monatliche Verbrauch in kWh
+# Output der Funktion sind die dadurch verursachten Kosten in EUR
+# Grundpreis      13.50 EUR
+# Verbrauchspreis  0.75 EUR/kWh
+
 # Funktion mit Datentyp (Schritt 3 und Schritt 5)
 def watt_fuer_wenig(verbrauch: float) -> float:
     kosten = 13.5 + verbrauch * 0.75
@@ -14,13 +20,6 @@ for x in verbrauch:
     kosten1.append(watt_fuer_wenig(x))
 
 # Ergebnisse drucken
-print(" Verbrauch  Watt für wenig")
+print("Verbrauch Kosten")
 for i in range(len(verbrauch)):
-    print("{:10.2f} {:15.2f}".format(verbrauch[i], kosten1[i]))    
-
-# Modul für das Plotten von Graphen importieren
-import matplotlib.pyplot as plt
-
-# Ergebnisse plotten
-plt.plot(verbrauch, kosten1)
-plt.show()
+    print(verbrauch[i], "\t", kosten1[i])    
