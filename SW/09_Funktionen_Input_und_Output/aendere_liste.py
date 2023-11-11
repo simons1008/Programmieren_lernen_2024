@@ -1,5 +1,5 @@
 # Ändere den Inhalt einer Liste
-# ACHTUNG: Bei einer Liste wird die Referenz an die Funktion übergeben.
+# ACHTUNG: Eine Liste ist am Ort veränderbar (mutable object).
 #          Schreib-Operationen in der Funktion ändern die Liste draußen! 
 
 # Funktion mit Datentyp
