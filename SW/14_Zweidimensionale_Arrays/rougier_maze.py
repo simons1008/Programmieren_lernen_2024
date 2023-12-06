@@ -1,6 +1,7 @@
 # Nicolas P. Rougier (2017), From Python to Numpy
 # https://www.labri.fr/perso/nrougier/from-python-to-numpy/#building-a-maze
-# 
+# https://en.wikipedia.org/wiki/Maze_generation_algorithm
+#
 # There exist many maze generation algorithms but I tend to prefer the one I've been using
 # for several years but whose origin is unknown to me. I've added the code in the cited
 # wikipedia entry. Feel free to complete it if you know the original author. This algorithm
