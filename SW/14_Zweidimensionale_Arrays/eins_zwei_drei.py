@@ -36,10 +36,19 @@ def plot_image(img):
     plt.colorbar()
     plt.show()
 
+# Überschrift
+print("\nZahlen in Schwarzweiß")
+
 # Plot-Funktion für jedes Array aufrufen
 plot_image(eins)
 plot_image(zwei)
 plot_image(drei)
+
+# Weiter?
+input("Weiter?")
+
+# Überschrift
+print("\nZahlen mit Grauwerten")
             
 # Zahl Eins mit einem hellen senkrechten Strich
 eins[:, 2] = 6
@@ -55,22 +64,37 @@ plot_image(eins)
 plot_image(zwei)
 plot_image(drei)
 
+# Weiter?
+input("Weiter?")
+
+# Überschrift
+print("\nZahlen mit Farbverläufen")
+
 # Zahl Eins mit einem senkrechten Farbverlauf
 eins[:, 2] = np.linspace(4, 12, 7)
+print("Zahl Eins mit Farbverlauf")
 print(eins)
 
 # Zahl Zwei mit einem waagerechten Farbverlauf
 zwei[6, :] = np.linspace(4, 12, 5)
+print("Zahl Zwei mit Farbverlauf")
 print(zwei)
 
 # Zahl Drei mit einem waagerechten Farbverlauf 
 drei[3, 1:4] = np.linspace(4, 12, 3)
+print("Zahl Drei  mit Farbverlauf")
 print(drei)
 
 # Plot-Funktion für jedes Array aufrufen
 plot_image(eins)
 plot_image(zwei)
 plot_image(drei)
+
+# Weiter?
+input("Weiter?")
+
+# Überschrift
+print("\nZahlen mit Fehlern")
 
 # In jede Zahl einen Fehler einbauen
 eins[3,0] = 0
@@ -81,3 +105,6 @@ drei[1,2] = 8
 plot_image(eins)
 plot_image(zwei)
 plot_image(drei)
+
+# Weiter?
+input("Weiter?")

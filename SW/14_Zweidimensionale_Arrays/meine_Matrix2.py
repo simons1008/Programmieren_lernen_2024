@@ -16,6 +16,9 @@ print(Matrix)
 # Drucke den Datentyp
 print("Datentyp", Matrix.dtype)
 
+# Weiter?
+input("Weiter?")
+
 # Zeilen adressieren
 print("\n1. Element jeder Zeile beschreiben")
 Matrix[0, 0] = "A1"
@@ -27,10 +30,16 @@ Matrix[4, 0] = "A5"
 # Drucke die Matrix
 print(Matrix)
 
+# Weiter?
+input("Weiter?")
+
 # Liste erneut initialisieren und drucken
 Matrix = np.full((5, 8), "__")
 print("\nInitialisierung")
 print(Matrix)
+
+# Weiter?
+input("Weiter?")
 
 # Spalten adressieren
 print("\n1. Element jeder Spalte beschreiben")
@@ -46,9 +55,15 @@ Matrix[0, 7] = "H1"
 # Drucke die Matrix
 print(Matrix)
 
+# Weiter?
+input("Weiter?")
+
 # Langen String ins letzte Element schreiben - wird abgeschnitten!
 print("\nlangen String schreiben")
 Matrix[4, 7] = "langer String"
 
 # Drucke die Matrix
 print(Matrix)
+
+# Weiter?
+input("Weiter?")

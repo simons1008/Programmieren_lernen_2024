@@ -13,6 +13,9 @@ Matrix = [["__" for x in range(breite)] for y in range(hoehe)]
 print("\nInitialisierung")
 pprint.pprint(Matrix)
 
+# Weiter?
+input("Weiter?")
+
 # Zeilen adressieren
 print("\n1. Element jeder Zeile beschreiben")
 Matrix[0][0] = "A1"
@@ -24,10 +27,16 @@ Matrix[4][0] = "A5"
 # Drucke die Matrix
 pprint.pprint(Matrix)
 
+# Weiter?
+input("Weiter?")
+
 # Liste erneut initialisieren und drucken
 Matrix = [["__" for x in range(breite)] for y in range(hoehe)]
 print("\nInitialisierung")
 pprint.pprint(Matrix)
+
+# Weiter?
+input("Weiter?")
 
 # Spalten adressieren
 print("\n1. Element jeder Spalte beschreiben")
@@ -43,9 +52,15 @@ Matrix[0][7] = "H1"
 # Drucke die Matrix
 pprint.pprint(Matrix)
 
+# Weiter?
+input("Weiter?")
+
 # Langen String ins letzte Element schreiben - bleibt erhalten!
 print("\nLangen String schreiben")
 Matrix[4][7] = "langer String"
 
 # Drucke die Matrix
 pprint.pprint(Matrix)
+
+# Weiter?
+input("Weiter?")
