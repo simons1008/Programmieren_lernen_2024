@@ -55,11 +55,6 @@ plot_image(eins)
 plot_image(zwei)
 plot_image(drei)
 
-# Fehler wieder ausbauen
-eins[3,0] = 15
-zwei[4,2] = 15
-drei[1,2] = 15
-
 # Zahl Eins mit einem senkrechten Farbverlauf
 eins[:, 2] = np.linspace(4, 12, 7)
 print(eins)
