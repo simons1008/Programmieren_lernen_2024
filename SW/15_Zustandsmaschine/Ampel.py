@@ -98,8 +98,8 @@ ROT_GELB.attach_transition(taste1_gedrueckt, GRUEN)
 GRUEN.attach_transition(taste1_gedrueckt, GELB)
 GELB.attach_transition(taste1_gedrueckt, ROT)
 
-# Übergänge durch Timer
-##GELB_BLINKEN.attach_transition(myTimer_1000.repeat_execution, ROT)
+### Übergänge durch Timer
+##GELB_BLINKEN.attach_transition(myTimer_5000.repeat_execution, ROT)
 ##ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
 ##ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
 ##GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
