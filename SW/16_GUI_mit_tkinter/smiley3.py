@@ -9,20 +9,22 @@ import tkinter as tk
 # - der Spalte im Gitter
 
 # Funktion erzeugt Bildausgabe und platziert im Gitter
-def bildausgabe(bild, zeile: int, spalte:int):
-    label = tk.Label(root, image=bild)
-    label.grid(row=zeile, column=spalte)
+def bildausgabe(bild, zeile: int, spalte: int):
+    label = tk.Label(root, image = bild)
+    label.grid(row = zeile, column = spalte)
 
 # Konstruktor für das Fenster aufrufen
 root = tk.Tk()
 
-# Eingangswerte für die Funktion erzeugen
-bild = []
-bild.append(tk.PhotoImage(file="slightly_smiling_face.png"))
-bild.append(tk.PhotoImage(file="neutral_face.png"))
-bild.append(tk.PhotoImage(file="slightly_frowning_face.png"))
+# Image-Objekte erzeugen
+bild1 = tk.PhotoImage(file="slightly_smiling_face.png")
+bild2 = tk.PhotoImage(file="neutral_face.png")
+bild3 = tk.PhotoImage(file="slightly_frowning_face.png")
 
-# Bildausgaben erzeugen und im Gitter platzieren
+# Liste mit Image-Objekten
+bild = [bild1, bild2, bild3]
+
+# Funktion im Loop aufrufen
 for i in range(len(bild)):
     bildausgabe(bild[i], i, i)
 
