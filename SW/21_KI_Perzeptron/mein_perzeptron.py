@@ -124,10 +124,10 @@ while cnt < max_epochs:
         x = feature[index]
         label = labels[index]
         delta = label - perzeptron(w, x)
-        if delta != 0:
+        if delta != 0: # falsch klassifiziert
             fehler[cnt] += 1
             w += delta * x
-
+    # wenn trainiert
     if fehler[cnt] == 0:
         # Visualisieren        
         visualize(feature, labels, w)
