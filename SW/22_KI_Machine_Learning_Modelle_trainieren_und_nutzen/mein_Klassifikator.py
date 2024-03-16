@@ -30,15 +30,16 @@ print("Vorhersage des trainierten Modells")
 predicted = clf.predict(X_test)
 
 # Vorhersage ausgeben
-print(predicted)
+print(f"Vorhersage: {predicted}")
 
 # Sollwerte ausgeben
-print(y_test)
+print(f"Sollwerte:  {y_test}")
 
 # Fehler ausgeben
-print(predicted - y_test)
+print(f"Fehler:     {predicted - y_test}")
 
 # Genauigkeit für die gegebenen Testdaten und Testlabels ausgeben
+print()
 print("Score: {:5.2f}".format(clf.score(X_test, y_test)))
 
 # Metrics Classification Report ausgeben
@@ -52,7 +53,7 @@ predicted = clf.predict(X_test[4].reshape(1, -1))
 
 # Vorhersage und Sollwert
 print("Vorhersage eines einzelnen Samples")
-print("Istwert: {:} Sollwert: {:}".format(predicted, y_test[4]))
+print("Vorhersage: {:} Sollwert: {:}".format(predicted, y_test[4]))
 
 # Testdaten speichern
 np.save("HSU_test_data.npy", X_test)
