@@ -15,9 +15,11 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8.
 | Inhaltsübersicht 	                | Doc/Inhalt_Programmierkurs                     |
 | Handbuch                          | Doc/Programmieren_lernen_2023                  |
 | Aufgaben		                    | Doc/Aufgaben_2023                              |
-| Anleitungen                       | Doc/Dateipfad_aendern und /pygame_installieren |
+| Anleitungen                       | Doc/Dateipfad_aendern                          | 
+|                                   | bis                                            |
+|                                   | Doc/tensorflow_installieren                    |
 
-> Das Handbuch nennt auf der letzten Seite alle Quellen des Kurses.
+> Das Handbuch nennt auf den letzten Seiten alle Quellen des Kurses.
 
 ## Ordner SW
 
