@@ -10,25 +10,25 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8.
 
 ## Ordner Doc
 
-| Inhalt                            | Datei .docx .pdf                               |
-| --------------------------------- | ---------------------------------------------- |
-| Inhaltsübersicht 	                | Doc/Inhalt_Programmierkurs                     |
-| Handbuch                          | Doc/Programmieren_lernen_2023                  |
-| Aufgaben		                    | Doc/Aufgaben_2023                              |
-| Anleitungen                       | Doc/Dateipfad_aendern                          | 
-|                                   | bis                                            |
-|                                   | Doc/tensorflow_installieren                    |
+| Inhalt                           | Datei .docx .pdf                               |
+| -------------------------------- | ---------------------------------------------- |
+| Inhaltsübersicht 	               | Doc/Inhalt_Programmierkurs                     |
+| Handbuch                         | Doc/Programmieren_lernen_2023                  |
+| Aufgaben		                   | Doc/Aufgaben_2023                              |
+| Anleitungen                      | Doc/Dateipfad_aendern                          | 
+|                                  | bis                                            |
+|                                  | Doc/tensorflow_installieren                    |
 
 > Das Handbuch nennt auf den letzten Seiten alle Quellen des Kurses.
 
 ## Ordner SW
 
-| Inhalt                           | Ordner                                          |
-| -------------------------------- | ------------------------------------------------|
-| Beispiele, Lösungen der Aufgaben | SW/03_Rechnen_mit_Zeichenketten_und_Zahlen      |
-|                                  | bis                                             |
-|                                  | SW/22_KI_Mustererkennung                        |
-| Für den Lehrer                   | SW/Lehrer                                       |
+| Inhalt                           | Ordner                                                  |
+| -------------------------------- | ------------------------------------------------------- |
+| Beispiele, Lösungen der Aufgaben | SW/03_Rechnen_mit_Zeichenketten_und_Zahlen              |
+|                                  | bis                                                     |
+|                                  | SW/22_KI_Machine_Learning_Modelle_trainieren_und_nutzen |
+| Für den Lehrer                   | SW/Lehrer                                               |
 
 ## Lizenz
 
