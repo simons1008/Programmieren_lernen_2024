@@ -5,12 +5,13 @@
 
 # Library importieren
 from tensorflow import keras
+import numpy as np
 
 # Modell laden
 reconstructed_model = keras.models.load_model("my_model.keras")
 
 # Wert voraussagen
-print(reconstructed_model.predict([11]))
+print(reconstructed_model.predict(np.array([11])))
 
 # Weiter?
 input("Rekonstruiertes Modell ausgeführt. Weiter?")
