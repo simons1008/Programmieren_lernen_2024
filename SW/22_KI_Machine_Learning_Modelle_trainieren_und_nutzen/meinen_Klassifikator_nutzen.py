@@ -19,15 +19,16 @@ print("Vorhersage des geladenen Modells")
 predicted = clf2.predict(X_test)
 
 # Vorhersage ausgeben
-print(predicted)
+print(f"Vorhersage: {predicted}")
 
 # Sollwerte ausgeben
-print(y_test)
+print(f"Sollwerte:  {y_test}")
 
 # Fehler ausgeben
-print(predicted - y_test)
+print(f"Fehler:     {predicted - y_test}")
 
 # Genauigkeit für die gegebenen Testdaten und Testlabels ausgeben
+print()
 print("Score: {:5.2f}".format(clf2.score(X_test, y_test)))
 
 # Ende
