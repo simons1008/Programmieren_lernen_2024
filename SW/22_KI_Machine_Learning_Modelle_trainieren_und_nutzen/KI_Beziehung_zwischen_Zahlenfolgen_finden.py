@@ -25,15 +25,11 @@ plt.show()
 model = tf.keras.Sequential([tf.keras.layers.Dense(1)])
 
 # Modell kompilieren
-model.compile(loss=tf.keras.losses.mae, # mae - mean absolute error
-              optimizer=tf.keras.optimizers.SGD(), # SGD - stochastic gradient descent
-              metrics=["mae"])
+model.compile(loss=tf.keras.losses.mse, # mse - mean square error
+              optimizer=tf.keras.optimizers.SGD()) # SGD - stochastic gradient descent
 
 # Modell fitten (fit - dazupassen)
-model.fit(tf.expand_dims(X, axis=-1), y, epochs=100) # Dimension der Input-Form expandieren
-
-# Zusammenfassung anzeigen
-model.summary()
+model.fit(tf.expand_dims(X, axis=-1), y, epochs=200) # Dimension der Input-Form expandieren
 
 # Modell mit X-Wert testen
 X_neu = np.array([11])

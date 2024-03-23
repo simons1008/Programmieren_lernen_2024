@@ -10,9 +10,6 @@ import numpy as np
 # Modell laden
 reconstructed_model = tf.keras.models.load_model("my_model.keras")
 
-# Zusammenfassung anzeigen
-reconstructed_model.summary()
-
 # Modell mit X-Wert testen
 X_neu = np.array([11])
 y_neu = reconstructed_model.predict(X_neu)
