@@ -1,28 +1,49 @@
-# KI Einführung - Beziehung zwischen zwei Zahlenfolgen finden - gerade/ungerade
+# KI Einführung - Beziehung zwischen zwei Zahlenfolgen finden
 #                 Modell exportieren
-# Quellen: Walter Stein https://steinphysik.de/download/272/
-#          https://www.tensorflow.org/guide/keras/serialization_and_saving
+# Quellen: https://www.youtube.com/@BreakingLab/playlists 
+#          KI programmieren lernen - Künstliche Intelligenz Tutorials
+#          https://dev.mrdbourke.com/tensorflow-deep-learning/
+#          01_neural_network_regression_in_tensorflow/ 
 
-# Library importieren
-from tensorflow import keras
+# Bibliotheken importieren
+import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Neuronales Netz definieren
-model = keras.Sequential()
-model.add(keras.layers.Dense(units=1, input_shape=[1]))
+# Datensatz erzeugen und plotten
+# Erzeuge Features
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+# Erzeuge Labels
+y = np.array([1, 3, 5, 7, 9, 11, 13, 15, 17])
+
+# Visualisierung
+plt.scatter(X, y);
+plt.show()
+
+# Modell erstellen
+model = tf.keras.Sequential([tf.keras.layers.Dense(1)])
 
 # Modell kompilieren
-model.compile(optimizer='sgd', loss='mean_squared_error')
+model.compile(loss=tf.keras.losses.mae, # mae - mean absolute error
+              optimizer=tf.keras.optimizers.SGD(), # SGD - stochastic gradient descent
+              metrics=["mae"])
 
-# Zahlenreihen
-inputs=np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
-expected_outputs=np.array([1, 3, 5, 7, 9, 11, 13, 15, 17])
+# Modell fitten (fit - dazupassen)
+model.fit(tf.expand_dims(X, axis=-1), y, epochs=100) # Dimension der Input-Form expandieren
 
-# Modell fitten
-model.fit(inputs, expected_outputs, epochs=200)
+# Zusammenfassung anzeigen
+model.summary()
 
-# Wert voraussagen
-print(model.predict(np.array([11])))
+# Modell mit X-Wert testen
+X_neu = np.array([11])
+y_neu = model.predict(X_neu)
+print(f"X_neu = {X_neu}, y_neu = {y_neu}")
+
+# Visualisierung mit dem neuen X-Wert
+plt.scatter(X, y, c="b");
+plt.scatter(X_neu, y_neu, c="r") 
+plt.show()
 
 # Modell für eine spätere Benutzung exportieren
 model.save("my_model.keras")

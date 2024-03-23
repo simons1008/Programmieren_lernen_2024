@@ -1,17 +1,22 @@
 # KI Einführung - Modell laden
 #               - Modell nutzen, d. h. Voraussage machen
-# Quellen: Walter Stein https://steinphysik.de/download/272/
-#          https://www.tensorflow.org/guide/keras/serialization_and_saving
+# Quelle:  https://dev.mrdbourke.com/tensorflow-deep-learning/
+#          01_neural_network_regression_in_tensorflow/ 
 
-# Library importieren
-from tensorflow import keras
+# Bibliotheken importieren
+import tensorflow as tf
 import numpy as np
 
 # Modell laden
-reconstructed_model = keras.models.load_model("my_model.keras")
+reconstructed_model = tf.keras.models.load_model("my_model.keras")
 
-# Wert voraussagen
-print(reconstructed_model.predict(np.array([11])))
+# Zusammenfassung anzeigen
+reconstructed_model.summary()
+
+# Modell mit X-Wert testen
+X_neu = np.array([11])
+y_neu = reconstructed_model.predict(X_neu)
+print(f"X_neu = {X_neu}, y_neu = {y_neu}")
 
 # Weiter?
 input("Rekonstruiertes Modell ausgeführt. Weiter?")
