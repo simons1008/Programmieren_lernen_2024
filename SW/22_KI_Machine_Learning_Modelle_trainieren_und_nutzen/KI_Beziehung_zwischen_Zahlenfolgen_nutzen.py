@@ -1,5 +1,5 @@
 # KI Einführung - Modell laden
-#               - Modell nutzen, d. h. Voraussage machen 
+#               - Modell nutzen, d. h. Voraussage machen
 # Quelle:  https://dev.mrdbourke.com/tensorflow-deep-learning/
 #          01_neural_network_regression_in_tensorflow/ 
 

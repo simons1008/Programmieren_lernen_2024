@@ -1,5 +1,5 @@
 # KI Einführung - Beziehung zwischen zwei Zahlenfolgen finden
-#                 Modell exportieren 
+#                 Modell exportieren
 # Quellen: https://www.youtube.com/@BreakingLab/playlists 
 #          KI programmieren lernen - Künstliche Intelligenz Tutorials
 #          https://dev.mrdbourke.com/tensorflow-deep-learning/
