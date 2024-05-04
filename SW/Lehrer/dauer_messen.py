@@ -21,3 +21,6 @@ ticks2 = ticks_us()
 
 # Dauer anzeigen
 print("Der Druck dauerte", ticks_diff(ticks1, ticks2), "Mikrosekunden")
+
+# Abfrage
+input("Fertig?")
