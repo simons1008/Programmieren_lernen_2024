@@ -10,7 +10,7 @@ import cv2
 detector =cv2.QRCodeDetector()
 
 # Bild importieren
-img = cv2.imread("Willkommen_bei_Wikipedia.png")
+img = cv2.imread("mein_QR_code.png")
 
 # Bild anzeigen
 cv2.imshow("QR Code", img)
@@ -29,4 +29,4 @@ print(qr_text)
 
 # Abfrage
 input("\nFertig?")
- 
+
