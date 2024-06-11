@@ -13,8 +13,8 @@ Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 9.
 | Inhalt                           | Datei .docx .pdf                               |
 | -------------------------------- | ---------------------------------------------- |
 | Inhaltsübersicht 	               | Doc/Inhalt_Programmierkurs                     |
-| Handbuch                         | Doc/Programmieren_lernen_2023                  |
-| Aufgaben		                   | Doc/Aufgaben_2023                              |
+| Handbuch                         | Doc/Programmieren_lernen_2024                  |
+| Aufgaben		                   | Doc/Aufgaben_2024                              |
 | Anleitungen                      | Doc/Dateipfad_aendern                          | 
 |                                  | bis                                            |
 |                                  | Doc/tensorflow_installieren                    |
