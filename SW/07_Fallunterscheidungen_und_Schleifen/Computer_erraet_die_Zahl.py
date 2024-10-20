@@ -33,8 +33,6 @@ while benutzereingabe != "e":
     if benutzereingabe == "k":
         # obere Grenze verkleinern
         obere = max(untere, x - 1)
-    else:
+    elif benutzereingabe == "g":
         # untere Grenze vergrößern
         untere = min(obere, x + 1)
-
-
