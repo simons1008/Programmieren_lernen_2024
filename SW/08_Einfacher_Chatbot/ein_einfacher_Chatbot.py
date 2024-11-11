@@ -12,8 +12,7 @@ zufallsantwort = ["Oh, wirklich",
 # Eine Reaktionsantwort ist ein Wert aus einem Wörterbuch
 reaktionsantwort = {"hallo": "aber Hallo",
                     "geht": "Was verstehst du darunter?",
-                    "essen": "Ich habe leider keinen Geschmackssinn :(",
-                    "bye": ""}
+                    "essen": "Ich habe leider keinen Geschmackssinn :("}
 
 # Chatbot begrüßt den Benutzer
 print("Willkommen beim Chatbot")
