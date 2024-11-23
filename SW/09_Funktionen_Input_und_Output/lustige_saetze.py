@@ -18,7 +18,7 @@ def zufall(subjekt, prädikat, objekt) -> str:
 # mein_subjekt = random.choice(subjekt)
 # mein_prädikat = random.choice(prädikat)
 # mein_objekt = random.choice(objekt)
-# mein_satz = mein_subjekt + " "  mein_prädikat + " " + mein_objekt
+# mein_satz = mein_subjekt + " " + mein_prädikat + " " + mein_objekt
 
 # Funktion baut den Satz
 mein_satz = zufall(subjekt, prädikat, objekt)
