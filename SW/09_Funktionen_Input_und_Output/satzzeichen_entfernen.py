@@ -17,7 +17,7 @@ def vereinfache(original: str) -> str:
 originale = [original1, original2, original3]
 
 # alle Sätze vereinfachen
-for i in range(3):
-    print(originale[i])
-    vereinfachung = vereinfache(originale[i])
+for x in originale:
+    print(x)
+    vereinfachung = vereinfache(x)
     print(vereinfachung)
