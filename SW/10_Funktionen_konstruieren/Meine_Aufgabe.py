@@ -19,4 +19,4 @@ for x in meine_input_liste:
 # Ergebnisse drucken
 print("Meine Überschrift") 
 for i in range(len(meine_input_liste)):
-    print("Mein Format String".format(meine_input_liste[i], meine_output_liste[i]))
+    print(meine_input_liste[i], "\t", meine_output_liste[i])
