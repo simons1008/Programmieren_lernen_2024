@@ -33,4 +33,4 @@ for i in range(1,4):
 # Ergebnisse drucken
 print("Bis Monat  Flatrate  Volumentarif") 
 for i in range(3):
-    print("{:5s} {:5.2f} {:5.2f}".format(monate[i], kosten1[i], kosten2[i]))
+    print("{:>9s} {:9.2f} {:9.2f}".format(monate[i], kosten1[i], kosten2[i]))
