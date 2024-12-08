@@ -19,8 +19,8 @@ def volumentarif(verbrauch: list[float]) -> float:
     return kosten
 
 # Input und Output initialisieren
-monate_liste = [1, 2, 3, 4, 5, 6]
-verbrauch_liste = [1.2, 1.5, 2, 1.2, 1, 2]
+monate_liste = [1, 2, 3]
+verbrauch_liste = [1.2, 1.5, 2]
 kosten1 = []
 kosten2 = []
 
