@@ -1,4 +1,4 @@
-# Funktionen zur Berechnung der Kosten von zwei Stromtarifen 
+# Programm vergleicht die Kosten von zwei Stromtarifen 
 
 # monatliche Kosten für Tarif Watt für wenig berechnen
 # Funktion mit Datentyp

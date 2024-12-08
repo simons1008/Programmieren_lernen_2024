@@ -1,4 +1,4 @@
-# Aufgabe der Funktion ist die Umrechung von britischen Pfund in Euro
+# Das Programm soll britische Pfund in Euro umrechnen und eine Tabelle ausgeben
 
 # Input der Funktion ist eine Dezimalzahl in der Einheit britische Pfund
 # Output der Funktion ist eine Dezimalzahl in der Einheit Euro
