@@ -1,17 +1,17 @@
-# monatliche Kosten für Tarif Billig Strom berechnen (Schritt 1)
+# monatliche Kosten für Tarif Billig Strom berechnen 
 
-# Datenanalyse (Schritt  2)
+# Datenanalyse 
 # Input der Funktion ist der monatliche Verbrauch in kWh
 # Output der Funktion sind die dadurch verursachten Kosten in EUR
 # Grundpreis       9.20 EUR
 # Verbrauchspreis  0.81 EUR/kWh
 
-# Funktion mit Datentyp (Schritt 3 und Schritt 5)
+# Funktion mit Datentyp 
 def billig_strom(verbrauch: float) -> float:
     kosten = 9.2 + verbrauch * 0.81
     return kosten
 
-# Ergebnisse berechnen, Liste initialisieren (Ab hier: Schritt 6)
+# Ergebnisse berechnen, Liste initialisieren 
 verbrauch = range(0, 150, 10)
 kosten1 = []
 

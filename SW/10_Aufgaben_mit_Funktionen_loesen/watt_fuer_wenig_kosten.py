@@ -1,17 +1,17 @@
-# monatliche Kosten für Tarif Watt für wenig berechnen (Schritt 1)
+# monatliche Kosten für Tarif Watt für wenig berechnen 
 
-# Datenanalyse (Schritt  2)
+# Datenanalyse 
 # Input der Funktion ist der monatliche Verbrauch in kWh
 # Output der Funktion sind die dadurch verursachten Kosten in EUR
 # Grundpreis      13.50 EUR
 # Verbrauchspreis  0.75 EUR/kWh
 
-# Funktion mit Datentyp (Schritt 3 und Schritt 5)
+# Funktion mit Datentyp 
 def watt_fuer_wenig(verbrauch: float) -> float:
     kosten = 13.5 + verbrauch * 0.75
     return kosten
 
-# Ergebnisse berechnen, Liste initialisieren (Ab hier: Schritt 6)
+# Ergebnisse berechnen, Liste initialisieren 
 verbrauch = range(0, 150, 10)
 kosten1 = []
 
