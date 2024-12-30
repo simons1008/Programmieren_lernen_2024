@@ -5,7 +5,7 @@ import unittest
 import sys
 
 # Pfad der zu testenden Funktionen anhängen
-sys.path.append("../10_Funktionen_konstruieren")
+sys.path.append("../10_Aufgaben_mit_Funktionen_loesen")
 
 # zu testende Funktion importieren
 import watt_fuer_wenig
