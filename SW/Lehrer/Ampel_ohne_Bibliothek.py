@@ -23,40 +23,30 @@ key_in = ' '
 # Bis zum Zustandswechsel wird die Funktion 1x aufgerufen
 # Ampel blinkt gelb
 def gelb_blinken():
-    global wechsel
     if wechsel:
         print("Die Ampel blinkt gelb")
-        wechsel = False
     print("gelb_blinken() aufgerufen")
     time.sleep(0.5)
 
 # Die Ampel ist rot
 def rot():
-    global wechsel
     if wechsel:
         print("Die Ampel ist rot")
-        wechsel = False
 
 # Die Ampel ist rot/gelb
 def rot_gelb():
-    global wechsel
     if wechsel: 
         print("Die Ampel ist rot/gelb")
-        wechsel = False
 
 # Die Ampel ist grün
 def gruen():
-    global wechsel
     if wechsel: 
         print("Die Ampel ist grün")
-        wechsel = False
 
 # Die Ampel ist gelb
 def gelb():
-    global wechsel
     if wechsel:
         print("Die Ampel ist gelb")
-        wechsel = False
 
 # Tasten einlesen
 def taste_gedrueckt(zeichen):
@@ -81,26 +71,31 @@ wechsel = True
 while True:
     if zustand == 'GELB_BLINKEN':
         gelb_blinken()
+        wechsel = False
         if taste_gedrueckt('1'):
             zustand = 'ROT'
             wechsel = True
     elif zustand == 'ROT':
         rot()
+        wechsel = False
         if taste_gedrueckt('1'):
             zustand = 'ROT_GELB'
             wechsel = True
     elif zustand == 'ROT_GELB':
         rot_gelb()
+        wechsel = False
         if taste_gedrueckt('1'):
             zustand = 'GRUEN'
             wechsel = True
     elif zustand == 'GRUEN':
         gruen()
+        wechsel = False
         if taste_gedrueckt('1'):        
             zustand = 'GELB'
             wechsel = True
     elif zustand == 'GELB':
         gelb()
+        wechsel = False
         if taste_gedrueckt('1'):        
             zustand = 'ROT'
             wechsel = True
