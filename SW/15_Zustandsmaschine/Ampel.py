@@ -5,7 +5,7 @@
 # Taste1 schaltet GELB_BLINKEN - ROT - ROT_GELB - GRUEN - GELB - ROT
 # Taste2 schaltet die Ampel auf GELB_BLINKEN
 # Einsatz der Bibliothek statemachine
-# Für die Aktionen der Tasten: Zeilen 101 bis 104 auskommentieren
+# Für die periodische Ausführung: Zeilen 32 bis 34 und 104 bis 108 aktivieren
 
 # Bibliothek für den Zustandsautomaten
 from statemachine import *
@@ -25,11 +25,13 @@ state_machine = StateMachine()
 # Vorbelegung des Zeichens von der Tastatur
 key_in = ' '
 
-# Timer 500 ms, 1000 ms, 2000 ms, 5000 ms für periodische Ausführung
+# Timer 500 ms für die wiederholte print-Ausgabe
 mytimer_500 = Neotimer(500)
-myTimer_1000 = Neotimer(1000)
-myTimer_2000 = Neotimer(2000)
-myTimer_5000 = Neotimer(5000)
+
+# Timer 1000 ms, 2000 ms, 5000 ms für periodische Ausführung
+##myTimer_1000 = Neotimer(1000)
+##myTimer_2000 = Neotimer(2000)
+##myTimer_5000 = Neotimer(5000)
 
 # Funktionen in den Zuständen
 # Bis zum Zustandswechsel wird die Funktion wiederholt aufgerufen
@@ -98,7 +100,7 @@ ROT_GELB.attach_transition(taste1_gedrueckt, GRUEN)
 GRUEN.attach_transition(taste1_gedrueckt, GELB)
 GELB.attach_transition(taste1_gedrueckt, ROT)
 
-### Übergänge durch Timer
+# Übergänge durch Timer
 ##GELB_BLINKEN.attach_transition(myTimer_5000.repeat_execution, ROT)
 ##ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
 ##ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
