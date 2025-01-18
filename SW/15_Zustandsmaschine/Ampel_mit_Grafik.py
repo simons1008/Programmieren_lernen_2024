@@ -1,6 +1,3 @@
-# WICHTIG: In IDLE gibt es einen Konflikt zwischen .mainloop() und .kbhit().
-# Deshalb muss das Programm von der Eingabeaufforderung aus gestartet werden
-
 # Zustandsautomat zur Steuerung einer Ampel
 # Die Timer schalten ein Mal GELB_BLINKEN - ROT
 # Danach periodisch - ROT_GELB - GRUEN - GELB - ROT- ROT_GELB - GRUEN usw.
@@ -170,4 +167,3 @@ state_machine_loop()
 
 # Hauptschleife, zur GUI Anzeige und Event-Verarbeitung 
 root.mainloop()
-
