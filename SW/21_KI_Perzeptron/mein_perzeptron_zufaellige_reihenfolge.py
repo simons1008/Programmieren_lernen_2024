@@ -60,7 +60,8 @@ feature = np.array([[37.92655435, 23.90101111],
 # feature in eine zufällige Reihenfolge bringen
 # erstelle einen neuen Zufallsgenerator mit seed, 
 # damit die 'zufällige' Reihenfolge immer gleich ist
-rng = np.random.default_rng(12345)
+seed = 12345
+rng = np.random.default_rng(seed)
 rng.shuffle(feature)
 
 # Array-Dimensionen ausgeben
@@ -89,7 +90,7 @@ labels = np.concatenate((np.ones(21), np.zeros(22)))
 # labels in die DIESELBE zufällige Reihenfolge WIE feature bringen
 # erstelle einen neuen Zufallsgenerator mit seed, 
 # damit die 'zufällige' Reihenfolge immer gleich ist
-rng = np.random.default_rng(12345)
+rng = np.random.default_rng(seed)
 rng.shuffle(labels)
 
 # Funktion visualisiert
