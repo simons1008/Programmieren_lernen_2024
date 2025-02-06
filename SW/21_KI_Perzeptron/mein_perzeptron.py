@@ -68,12 +68,14 @@ print("Array-Dimensionen mit dem Vektor von Einsen")
 print(feature.shape)
 
 # feature skalieren
-maximum = np.max(feature, 0)
-print("Maximalwert in jeder Spalte")
-print(maximum)
 skalierungsfaktor = np.max(feature, 0)
 feature /= skalierungsfaktor
 print(feature)
+print("Skalierungsfaktor")
+print(skalierungsfaktor)
+
+# Skalierungsfaktor in Datei schreiben
+np.save("skalierungsfaktor.npy", skalierungsfaktor)
 
 # Label speichern. Vereinfachung:
 # - die ersten  21 sind features von Hunden
@@ -146,13 +148,16 @@ plt.show()
 print("gelernte Gewichte")
 print(w)
 
+# gelernte Gewichte in Datei schreiben
+np.save("gewichte.npy", w)
+
 # neues feature angeben und skalieren
 x_neu = [40.0, 20.0, 1]
 x_neu /= skalierungsfaktor
 
 # neues feature an die Trainingsdaten anhängen 
 feature = np.concatenate((feature, np.atleast_2d(x_neu)))
-# neues label für das neue feature anhängen
+# neues label für das neue feature anhängen - setzt die Farbe im Diagramm
 labels = np.concatenate((labels, np.atleast_1d(0.5)))
 # visualisieren
 visualize(feature, labels, w)
