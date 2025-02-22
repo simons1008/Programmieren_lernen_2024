@@ -50,7 +50,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
        
-    def update(self):
+    def move(self):
         pressed_keys = pygame.key.get_pressed()
         
         if self.rect.left > 0:
@@ -73,7 +73,7 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    P1.update()
+    P1.move()
     E1.move()
     
     DISPLAYSURF.fill(WHITE)
