@@ -24,7 +24,7 @@ def verdoppeln(wert: int) -> int:
     return wert * 2
 # Aufruf der Funktion
 ergebnis = verdoppeln(5)
-print(ergebnis)
+print("ergebnis =", ergebnis)
 
 # Funktion mit 2 Outputs
 def wo_bin_ich() -> tuple[int, int]:
@@ -34,3 +34,24 @@ def wo_bin_ich() -> tuple[int, int]:
 # Aufruf der Funktion
 x, y = wo_bin_ich()
 print("x =", x, "y =", y)
+
+# Funktion mit einer Liste als Input
+def verteuerung(liste: list[float], p:[float]):
+    for i in range(len(liste)):
+        liste[i] *= 1 + p
+
+# Liste anlegen
+original = [9, 12, 12.5, 24.5]
+
+# Liste kopieren
+kopie = original.copy()
+
+# Prozentsatz festlegen
+p = 0.05
+
+# Aufruf der Funktion
+verteuerung(kopie, p)
+
+# Original und Verteuerung
+print("original =", original)
+print("kopie =", kopie)
