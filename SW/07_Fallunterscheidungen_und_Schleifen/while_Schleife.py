@@ -1,6 +1,6 @@
-# Schleifen
-
 # While-Schleife
+
+# Variable initialisieren
 durchgang = 1
 
 # Solange durchgang kleiner als 11 ist: Durchlaufe die Schleife
