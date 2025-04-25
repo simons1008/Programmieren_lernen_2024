@@ -21,5 +21,5 @@ for x in gbp_liste:
 
 # Ergebnisse drucken
 print("gbp    eur")
-for i in range(len(gbp_liste)):
-    print("{:5.2f} {:5.2f}".format(gbp_liste[i], eur_liste[i]))
+for x, y in zip(gbp_liste, eur_liste):
+    print("{:5.2f} {:5.2f}".format(x, y))

@@ -1,5 +1,5 @@
-# Das Programm soll Subjekt, Prädikat, Objekt aus Listen zufällig auswählen
-# und einen Satz bauen
+# Das Programm soll Subjekt, Prädikat, Objekt aus Listen
+# zufällig auswählen und einen Satz bauen
 
 # Bibliothek importieren
 import random
@@ -13,7 +13,8 @@ objekt = ["den Knochen", "den Bürgermeister", "ein Bild"]
 # Output der Funktion ist der Satz
 
 # Funktion mit Datentyp
-def bau_den_satz(subjekt: list[str], prädikat: list[str], objekt: list[str]) -> str:
+def bau_den_satz(subjekt: list[str], prädikat: list[str], \
+                 objekt: list[str]) -> str:
     mein_subjekt = random.choice(subjekt)
     mein_prädikat = random.choice(prädikat)
     mein_objekt = random.choice(objekt)
