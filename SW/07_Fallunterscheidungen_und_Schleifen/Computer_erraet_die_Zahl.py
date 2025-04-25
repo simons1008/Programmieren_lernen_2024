@@ -21,7 +21,7 @@ benutzereingabe = ""
 # Solange raten, bis Benutzer e eingibt
 while benutzereingabe != "e":
     # Zahl raten
-    x = (obere + untere)//2
+    x = (untere + obere)//2
 
     # Zahl ausgeben
     print("Der Computer rät ", x)
