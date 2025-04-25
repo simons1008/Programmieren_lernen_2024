@@ -1,4 +1,4 @@
-# Eine for-Schleife mit Hilfe von range() begrenzen
+# Eine for-Schleife mit range()
 
 # Solange durchgang Element von range() ist
 for durchgang in range(10):

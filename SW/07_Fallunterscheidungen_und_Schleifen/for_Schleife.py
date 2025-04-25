@@ -1,4 +1,4 @@
-# Eine for-Schleife ausführen
+# Eine for-Schleife mit Liste
 
 # Liste initialisieren
 vornamen = ["Axel", "Elke", "Martin"]
