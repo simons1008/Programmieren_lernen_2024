@@ -15,20 +15,18 @@ import billig_strom
 class Stromtarif_test(unittest.TestCase):
 
     def test_watt_fuer_wenig(self):
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(0), 13.5)
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(10), 21.0)
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(20), 28.5)
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(50), 51.0)
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(100), 88.5)
-        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(140), 118.5)
+        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(0), 15.6)
+        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(10), 18.8)
+        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(50), 31.6)
+        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(100), 47.6)
+        self.assertAlmostEqual(watt_fuer_wenig.watt_fuer_wenig(150), 63.6)
 
     def test_billig_strom(self):
-        self.assertAlmostEqual(billig_strom.billig_strom(0), 9.2)
-        self.assertAlmostEqual(billig_strom.billig_strom(10), 17.3)
-        self.assertAlmostEqual(billig_strom.billig_strom(20), 25.4)
-        self.assertAlmostEqual(billig_strom.billig_strom(50), 49.7)
-        self.assertAlmostEqual(billig_strom.billig_strom(100), 90.2)
-        self.assertAlmostEqual(billig_strom.billig_strom(140), 122.6)
+        self.assertAlmostEqual(billig_strom.billig_strom(0), 12.8)
+        self.assertAlmostEqual(billig_strom.billig_strom(10), 16.4)
+        self.assertAlmostEqual(billig_strom.billig_strom(50), 30.8)
+        self.assertAlmostEqual(billig_strom.billig_strom(100), 48.8)
+        self.assertAlmostEqual(billig_strom.billig_strom(150), 66.8)
 
 # Unittest ausführen, wenn die Datei direkt aufgerufen wird
 if __name__ == '__main__':
