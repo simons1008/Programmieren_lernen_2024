@@ -29,7 +29,7 @@ for x in verbrauch_liste:
     kosten_liste2.append(billig_strom(x))
 
 # Ergebnisse drucken
-print("Verbrauch  Watt für wenig  Billig Strom")
+print(" Verbrauch  Watt für wenig  Billig Strom")
 for x, y, z in zip(verbrauch_liste, kosten_liste1, kosten_liste2):
     print("{:10.2f} {:15.2f} {:13.2f}".format(x, y, z))
 
