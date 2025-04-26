@@ -25,8 +25,8 @@ for x in verbrauch:
 
 # Ergebnisse drucken
 print(" Verbrauch  Watt für wenig  Billig-Strom")
-for i in range(len(verbrauch)):
-    print("{:10.2f} {:15.2f} {:13.2f}".format(verbrauch[i], kosten1[i], kosten2[i]))
+for x, y, z in zip(verbrauch, kosten1, kosten2):
+    print("{:10.2f} {:15.2f} {:13.2f}".format(x, y, z))
 
 # Modul für das Plotten von Graphen importieren
 import matplotlib.pyplot as plt
