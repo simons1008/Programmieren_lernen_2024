@@ -1,22 +1,24 @@
-# Das Programm soll britische Pfund in Euro umrechnen und eine Tabelle ausgeben
+# Das Programm soll GPB in EUR umrechnen und eine Tabelle ausgeben
 
-# Input der Funktion ist eine Dezimalzahl in der Einheit britische Pfund
-# Output der Funktion ist eine Dezimalzahl in der Einheit Euro
-# Umrechnungsfaktor 1 gbp = 1.21 eur
+# Input der Funktion ist eine Dezimalzahl in der Einheit GBP
+# Output der Funktion ist eine Dezimalzahl in der Einheit EUR
+# Umrechnungsfaktor 1 GBP = 1.21 EUR
 
 # Funktion mit Datentyp
 def gbp_in_eur(gbp: float) -> float:
-    eur = 1.21 * gbp
+    eur = gbp * 1.21
     return eur
 
-# Input und Output initialisieren
+# Input Liste anlegen
 gbp_liste = []
 for i in range(21):
     gbp_liste.append(i * 0.5)
+
+# Output Liste (leer) anlegen
 eur_liste = []
 
-# Output erstellen
-for x in gbp_liste: 
+# Funktion aufrufen 
+for x in gbp_liste:
     eur_liste.append(gbp_in_eur(x))
 
 # Ergebnisse drucken
