@@ -106,7 +106,6 @@ def search_from(maze, start_row, start_column):
     # base Case return values:
     #  1. We have run into an obstacle, return false
     maze.update_position(start_row, start_column)
-    print(maze[start_row][start_column])
     if maze[start_row][start_column] == OBSTACLE:
         return False
     #  2. We have found a square that has already been explored
