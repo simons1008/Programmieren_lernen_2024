@@ -1,3 +1,4 @@
+# Quelle: https://stackoverflow.com/questions/43461566/detecting-collision-in-python-turtle-game
 from turtle import Turtle, Screen
 
 playGround = Screen()
