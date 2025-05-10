@@ -4,6 +4,7 @@
 #           neue Funktion transform(self, row)
 #           draw_centered_box ersetzt durch draw_box
 #           move_turtle bewegt Turtle in die Mitte der Box
+#           Aufruf von mainloop() hinzugefügt
 
 import turtle
 
@@ -145,3 +146,5 @@ my_maze.draw_maze()
 my_maze.update_position(my_maze.start_row, my_maze.start_col)
 
 search_from(my_maze, my_maze.start_row, my_maze.start_col)
+
+my_maze.wn.mainloop()
