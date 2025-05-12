@@ -61,10 +61,28 @@ def build_maze(width=65, height=65, complexity=0.75, density=0.50):
                 break
     return Z
 
+
+# Irrgarten erzeugen
+Z = build_maze()
+
+# Irrgarten in Textdatei schreiben
+# List-of-lists in String umwandeln: True -> '+', False -> ' '
+my_string = ''
+for row in range(len(Z)):
+    for val in Z[row]:
+        if val:
+            my_string += '+'
+        else:
+            my_string += ' '
+    # Umbruch am Ende von row
+    my_string += '\n'
+# Textdatei schreiben
+with open("my_maze.txt", mode = "w") as datei:
+    datei.write(my_string)
+
 # Plot by Francisco Gama (2012)
 # https://gist.github.com/fcogama/3689650
-
 plt.figure(figsize=(10,5))
-plt.imshow(build_maze(),cmap=plt.cm.binary,interpolation='nearest')
+plt.imshow(Z,cmap=plt.cm.binary,interpolation='nearest')
 plt.xticks([]),plt.yticks([])
 plt.show()

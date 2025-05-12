@@ -13,9 +13,6 @@ import time
 START = "S"
 OBSTACLE = "+"
 BLANK = " "
-TRIED = "."
-DEAD_END = "-"
-PART_OF_PATH = "O"
 
 # heading properties
 right_of  = {"up": "right", "down": "left" , "left": "up"  , "right": "down"}
