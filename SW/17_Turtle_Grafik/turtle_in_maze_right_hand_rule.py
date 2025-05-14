@@ -29,7 +29,6 @@ class Maze:
             ]
         self.rows_in_maze = len(self.maze_list)
         self.columns_in_maze = len(self.maze_list[0])
-##        self.robot_heading = 90 # initial robot heading
         for row_idx, row in enumerate(self.maze_list):
             if START in row:
                 self.start_row = row_idx
