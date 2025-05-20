@@ -125,17 +125,17 @@ class Maze:
         return left_of[heading]
 
 def search_from(maze, start_row, start_col):
-    # keine Spur zum Start verbergen
+    # Spur bis zum Start verbergen
     maze.t.up()
     maze.update_position(start_row, start_col, BLANK)
     # Spur einschalten
     maze.t.down()
     heading = maze.init_search()
+
     # solange vorne frei ist
     while maze.look_forward(start_row, start_col, heading) == BLANK:
         start_row, start_col = maze.one_step(start_row, start_col, heading)
         maze.update_position(start_row, start_col)
-
     # drehen, damit rechte Hand an der Wand ist
     heading = maze.turn_left(heading)
 
