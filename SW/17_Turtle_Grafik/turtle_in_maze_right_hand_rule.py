@@ -144,21 +144,20 @@ def search_from(maze, start_row, start_col):
     turn_count = 1
 
     while True:
-        # solange kein Exit und vorne frei und die Wand rechts ist
-        while maze.is_exit(start_row, start_col) == False\
-          and maze.look_forward(start_row, start_col, heading) == BLANK\
-          and maze.look_right(start_row, start_col, heading) == OBSTACLE:
-            start_row, start_col = maze.one_step(start_row, start_col, heading)
-            maze.update_position(start_row, start_col)
-
         # wenn Turtle den Ausgang gefunden hat
         if maze.is_exit(start_row, start_col):
             print("Exit found!")
             print(turn_count, "Drehungen")
             break
+        
+        # solange vorne frei und die Wand rechts ist
+        while maze.look_forward(start_row, start_col, heading) == BLANK\
+          and maze.look_right(start_row, start_col, heading) == OBSTACLE:
+            start_row, start_col = maze.one_step(start_row, start_col, heading)
+            maze.update_position(start_row, start_col)
 
         # wenn die Wand nicht mehr rechts ist
-        elif maze.look_right(start_row, start_col, heading) == BLANK:
+        if maze.look_right(start_row, start_col, heading) == BLANK:
             # drehen und 1 Schritt vorwärts, damit rechte Hand an der Wand ist
             heading = maze.turn_right(heading)
             turn_count += 1
@@ -170,7 +169,7 @@ def search_from(maze, start_row, start_col):
             # drehen, damit rechte Hand an der Wand ist
             heading = maze.turn_left(heading)
             turn_count += 1
-    
+
 my_maze = Maze("maze3.txt")
 my_maze.draw_maze()
 my_maze.t.home()
