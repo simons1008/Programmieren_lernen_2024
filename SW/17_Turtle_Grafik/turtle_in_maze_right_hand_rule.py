@@ -98,8 +98,8 @@ class Maze:
 
     def init_search(self):
         self.t.speed(3)
-        self.t.setheading(270)
-        heading = "down"
+        self.t.setheading(90)
+        heading = "up"
         time.sleep(1)
         return heading
 
@@ -157,12 +157,6 @@ def search_from(maze, start_row, start_col):
             print(turn_count, "Drehungen")
             break
 
-        # wenn vorne eine Wand ist
-        elif maze.look_forward(start_row, start_col, heading) == OBSTACLE:
-            # drehen, damit rechte Hand an der Wand ist
-            heading = maze.turn_left(heading)
-            turn_count += 1
-
         # wenn die Wand nicht mehr rechts ist
         elif maze.look_right(start_row, start_col, heading) == BLANK:
             # drehen und 1 Schritt vorwärts, damit rechte Hand an der Wand ist
@@ -170,6 +164,12 @@ def search_from(maze, start_row, start_col):
             turn_count += 1
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
+
+        # wenn vorne eine Wand ist
+        elif maze.look_forward(start_row, start_col, heading) == OBSTACLE:
+            # drehen, damit rechte Hand an der Wand ist
+            heading = maze.turn_left(heading)
+            turn_count += 1
     
 my_maze = Maze("maze3.txt")
 my_maze.draw_maze()
