@@ -15,10 +15,10 @@ class Maze:
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+'],
+         ['+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+']]
         self.rows_in_maze = len(self.maze_list)
@@ -30,6 +30,11 @@ class Maze:
         # Koordinaten des Fensters festlegen
         self.wn = turtle.Screen()
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
+    # Transformiere die Zeilennummer (row)
+    def transform(self, row):
+        # Zeilen der Liste laufen von oben nach unten
+        # y Koordinaten des Fensters laufen von unten nach oben 
+        return (self.rows_in_maze - 1) - row
     # Zeichne ein ausgefülltes Rechteck
     def draw_box(self, x, y, color):
         self.t.up() # Stift hoch
@@ -52,7 +57,7 @@ class Maze:
         for row in range(self.rows_in_maze):
             for col in range(self.columns_in_maze):
                 if self.maze_list[row][col] == OBSTACLE:
-                    self.draw_box(col, row, "orange")
+                    self.draw_box(col, self.transform(row), "orange")
         # Farbe des Roboters
         self.t.color("black")
         self.t.fillcolor("blue")
