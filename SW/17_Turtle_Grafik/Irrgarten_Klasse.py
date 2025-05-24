@@ -34,7 +34,7 @@ class Maze:
         self.draw_box(0, 0, "orange")
         self.draw_box(self.columns_in_maze - 1, self.rows_in_maze - 1, "magenta")
         self.draw_box(self.columns_in_maze//2, self.rows_in_maze//2, "cyan") 
-        # Farbe des Roboters (Schildkröte)
+        # Farbe des Roboters
         self.t.color("black")
         self.t.fillcolor("blue")
         self.wn.update()
