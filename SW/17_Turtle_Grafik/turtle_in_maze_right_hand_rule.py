@@ -35,7 +35,6 @@ class Maze:
                 self.start_col = row.index(START)
                 break
 
-        self.y_translate = self.rows_in_maze - 1
         self.t = turtle.Turtle()
         self.t.shape("turtle")
         self.wn = turtle.Screen()
