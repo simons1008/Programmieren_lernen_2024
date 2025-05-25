@@ -38,6 +38,7 @@ class Maze:
         self.t = turtle.Turtle()
         self.t.shape("turtle")
         self.wn = turtle.Screen()
+        self.wn.setup(800, 400)
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
   
     def transform(self, row):
