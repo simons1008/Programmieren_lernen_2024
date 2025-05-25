@@ -1,7 +1,7 @@
 # Quelle: https://runestone.academy/ns/books/published/pythonds3/Recursion/ExploringaMaze.html
 # Geändert: setworldcoordinates mit Ursprung in der linken unteren Ecke
 #           self.x_translate und self.y_translate entfallen
-#           neue Funktion transform(self, row)
+#           neue Funktion from_bottom(self, row)
 #           draw_centered_box ersetzt durch draw_box
 #           move_turtle bewegt Turtle in die Mitte der Box
 #           search_from() arbeitet mit dem Pledge-Algorithmus
@@ -42,7 +42,7 @@ class Maze:
         self.wn.setup(400, 800)
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
   
-    def transform(self, row):
+    def from_bottom(self, row):
         # rows from top to bottom <-> y coordinates from bottom to top 
         return (self.rows_in_maze - 1) - row
 
@@ -53,7 +53,7 @@ class Maze:
             for col in range(self.columns_in_maze):
                 if self.maze_list[row][col] == OBSTACLE:
                     self.draw_box(
-                        col, self.transform(row), "orange"
+                        col, self.from_bottom(row), "orange"
                     )
         self.t.color("black")
         self.t.fillcolor("blue")
@@ -84,7 +84,7 @@ class Maze:
         # delete START character
         if val:
             self.maze_list[row][col] = val
-        self.move_turtle(col, self.transform(row))
+        self.move_turtle(col, self.from_bottom(row))
 
     def is_exit(self, row, col):
         return (
