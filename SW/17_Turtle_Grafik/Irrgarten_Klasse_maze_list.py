@@ -1,4 +1,6 @@
 # Programm erzeugt ein Fenster und setzt die Wände eines Irrgartens hinein
+# - Die Wände sind in einer Liste von Listen abgelegt
+# - Eine Funktion setzt die Wände in das Fenster
 # Modul für die Turtle-Grafik importieren
 import turtle
 # Zeichen für Wand und Freiraum

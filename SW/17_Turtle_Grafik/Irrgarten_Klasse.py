@@ -1,4 +1,5 @@
 # Programm erzeugt ein Fenster und setzt die Wände eines Irrgartens hinein
+# - Eine Funktion setzt die Wände in das Fenster
 # Modul für die Turtle-Grafik importieren
 import turtle
 # Irrgarten-Klasse 
