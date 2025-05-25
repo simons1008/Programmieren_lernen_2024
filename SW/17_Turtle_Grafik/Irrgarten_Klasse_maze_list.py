@@ -11,15 +11,15 @@ class Maze:
     def __init__(self):
         self.maze_list =\
         [['+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+','+','+','+',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+',' ',' ',' ','+',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+',' ',' ',' ','+',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+','+','+','+',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+',' ',' ',' ',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ','+',' ',' ',' ','+',' ','+',' ',' ',' ',' ',' ',' ',' ',' ','+'],
+         ['+',' ',' ',' ',' ',' ',' ','+','+','+',' ',' ','+',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
-         ['+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+','+',' ',' ',' ',' ',' ',' ',' ',' ',' ','+'],
          ['+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+']]
         self.rows_in_maze = len(self.maze_list)
         self.columns_in_maze = len(self.maze_list[0])
@@ -27,14 +27,12 @@ class Maze:
         # turtle Objekt erzeugen und Aussehen festlegen 
         self.t = turtle.Turtle()
         self.t.shape("turtle")
-        # Fenster Objekt zuweisen
+        # Breite, Höhe und Koordinaten des Fensters festlegen
         self.wn = turtle.Screen()
-        # Breite und Höhe des Fensters festlegen
         self.wn.setup(800, 400)
-        # Koordinaten des Fensters festlegen
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
-    # Transformiere die Zeilennummer (row)
-    def transform(self, row):
+    # Lies die Zeilennummer von unten
+    def from_bottom(self, row):
         # Zeilen der Liste laufen von oben nach unten
         # y Koordinaten des Fensters laufen von unten nach oben 
         return (self.rows_in_maze - 1) - row
@@ -52,20 +50,19 @@ class Maze:
             self.t.forward(1)
             self.t.right(90)
         self.t.end_fill()
+# Setze Wände in das Fenster
     def draw_maze(self):
-        # Animation des Roboters ausschalten
+        # Animation der Schildkröte ausschalten
         self.wn.tracer(0)
-        # Setze Wände in das Fenster. Die Farben 'white', 'black', 'red',
-        # 'green', 'blue', 'cyan', 'yellow' und 'magenta' sind verfügbar.
         for row in range(self.rows_in_maze):
             for col in range(self.columns_in_maze):
                 if self.maze_list[row][col] == OBSTACLE:
-                    self.draw_box(col, self.transform(row), "orange")
-        # Farbe des Roboters
+                    self.draw_box(col, self.from_bottom(row), "orange")
+        # Farbe der Schildkröte
         self.t.color("black")
         self.t.fillcolor("blue")
         self.wn.update()
-        # Animation des Roboters einschalten
+        # Animation der Schildkröte einschalten
         self.wn.tracer(1)
 # Instanz erzeugen
 my_maze = Maze()

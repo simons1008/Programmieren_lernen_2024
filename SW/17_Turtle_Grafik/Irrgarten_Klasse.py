@@ -11,11 +11,9 @@ class Maze:
         # turtle Objekt erzeugen und Aussehen festlegen 
         self.t = turtle.Turtle()
         self.t.shape("turtle")
-        # Fenster Objekt zuweisen
+        # Breite, Höhe und Koordinaten des Fensters festlegen
         self.wn = turtle.Screen()
-        # Breite und Höhe des Fensters festlegen
         self.wn.setup(800, 400)
-        # Koordinaten des Fensters festlegen
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
     # Zeichne ein ausgefülltes Rechteck
     def draw_box(self, x, y, color):
@@ -31,13 +29,13 @@ class Maze:
             self.t.forward(1)
             self.t.right(90)
         self.t.end_fill()
+    # Setze Wände in das Fenster
     def draw_maze(self):
-        # Setze Wände in das Fenster. Die Farben 'white', 'black', 'red',
-        # 'green', 'blue', 'cyan', 'yellow' und 'magenta' sind verfügbar.
+        # Farben: 'white','black','red','green','blue','cyan','yellow','magenta'
         self.draw_box(0, 0, "orange")
         self.draw_box(self.columns_in_maze - 1, self.rows_in_maze - 1, "magenta")
         self.draw_box(self.columns_in_maze//2, self.rows_in_maze//2, "cyan") 
-        # Farbe des Roboters
+        # Farbe der Schildkröte
         self.t.color("black")
         self.t.fillcolor("blue")
         self.wn.update()
