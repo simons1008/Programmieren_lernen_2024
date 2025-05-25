@@ -11,8 +11,11 @@ class Maze:
         # turtle Objekt erzeugen und Aussehen festlegen 
         self.t = turtle.Turtle()
         self.t.shape("turtle")
-        # Koordinaten des Fensters festlegen
+        # Fenster Objekt zuweisen
         self.wn = turtle.Screen()
+        # Breite und Höhe des Fensters festlegen
+        self.wn.setup(800, 400)
+        # Koordinaten des Fensters festlegen
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
     # Zeichne ein ausgefülltes Rechteck
     def draw_box(self, x, y, color):
