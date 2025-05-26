@@ -47,7 +47,7 @@ class Maze:
             self.t.forward(1)
             self.t.right(90)
         self.t.end_fill()
-# Setze Wände in das Fenster
+    # Setze Wände in das Fenster
     def draw_maze(self):
         # Animation der Schildkröte ausschalten
         self.wn.tracer(0)
