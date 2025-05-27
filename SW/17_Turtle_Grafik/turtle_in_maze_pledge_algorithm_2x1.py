@@ -1,5 +1,8 @@
 # Quelle: https://runestone.academy/ns/books/published/pythonds3/Recursion/ExploringaMaze.html
-# Geändert: setworldcoordinates mit Ursprung in der linken unteren Ecke
+# Geändert: "maze_list aus Datei lesen" mit zwei Schleifen codiert
+#           "Start in maze_list suchen" mit zwei verschachtelten Schleifen codiert
+#           Funktion __getitem__() entfällt
+#           setworldcoordinates mit Ursprung in der linken unteren Ecke
 #           self.x_translate und self.y_translate entfallen
 #           neue Funktion from_bottom(self, row)
 #           draw_centered_box ersetzt durch draw_box
@@ -22,18 +25,21 @@ delta_col = {"up": 0      , "down": 0      , "left": -1    , "right": 1     }
 
 class Maze:
     def __init__(self, maze_filename):
+        self.maze_list = []
         with open(maze_filename, "r") as maze_file:
-            self.maze_list = [
-                [ch for ch in line.rstrip("\n")]
-                for line in maze_file.readlines()
-            ]
+            self.lines = maze_file.readlines()
+            for line in self.lines:
+                self.maze_list.append([ch for ch in line.rstrip("\n")])
         self.rows_in_maze = len(self.maze_list)
         self.columns_in_maze = len(self.maze_list[0])
-        for row_idx, row in enumerate(self.maze_list):
-            if START in row:
-                self.start_row = row_idx
-                self.start_col = row.index(START)
-                break
+        print("rows_in_maze =", self.rows_in_maze, "columns_in_maze =", self.columns_in_maze)
+        # Start in maze_list suchen
+        for row in range(self.rows_in_maze):
+            for col in range(self.columns_in_maze):
+                if self.maze_list[row][col] == START:
+                    self.start_row = row
+                    self.start_col = col
+                    break
 
         self.t = turtle.Turtle()
         self.t.shape("turtle")
@@ -92,9 +98,6 @@ class Maze:
             or col == 0
             or col == self.columns_in_maze - 1
         )
-
-    def __getitem__(self, idx):
-        return self.maze_list[idx]
 
     def init_search(self):
         self.t.speed(3)
