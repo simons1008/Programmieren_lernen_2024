@@ -3,7 +3,7 @@
 Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8. 
 
 ## Typischer Ablauf einer Kurseinheit
-1. Der Lehrer führt das Thema ein und demonstriert den Programmcode auf seinem PC. 
+1. Der Lehrer führt in das Thema ein und demonstriert den Programmcode auf seinem PC. 
 2. Auf den PCs der Schülerinnen und Schüler liegt Programmcode. Dazu erhalten sie ein Arbeitsblatt.  
 3. Die Schülerinnen und Schüler lösen selbstständig die Aufgaben auf dem Arbeitsblatt.  
 4. Abschließend werden die Lösungen besprochen.  
