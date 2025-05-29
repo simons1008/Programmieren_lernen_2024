@@ -44,7 +44,7 @@ class Maze:
         self.t = turtle.Turtle()
         self.t.shape("turtle")
         self.wn = turtle.Screen()
-        self.wn.setup(400, 400)
+        self.wn.setup(800, 400)
         self.wn.setworldcoordinates(0, 0, self.columns_in_maze, self.rows_in_maze)
   
     def from_bottom(self, row):
@@ -184,7 +184,7 @@ def search_from(maze, start_row, start_col):
     print(turn_count, "Drehungen")
     
         
-my_maze = Maze("maze4.txt")
+my_maze = Maze("maze3.txt")
 my_maze.draw_maze()
 my_maze.t.home()
 search_from(my_maze, my_maze.start_row, my_maze.start_col)
