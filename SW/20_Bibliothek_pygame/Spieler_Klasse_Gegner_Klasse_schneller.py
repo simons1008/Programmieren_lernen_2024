@@ -106,7 +106,7 @@ while True:
     for event in pygame.event.get():
         if event.type == INC_SPEED:
             # Gegner schneller machen
-            E1.speed += 0.5
+            E1.speed += 1
         if event.type == pygame.QUIT:
             # Spiel-Ende
             end_of_game()
