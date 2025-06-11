@@ -1,9 +1,11 @@
-# Programm erzeugt ein fenster mit einem Auto und Gegenverkehr
-# - Das eine Auto wird mit den Pfeil-Tasten gesteuert
-# - Das andere Auto kommt auf einem zufälligen Kurs entgegen
-# - Punkte werden gezählt
-# - Ein Zusammenstoß wird gemeldet
-# - Der Gegenverkehr wird schneller
+# Quelle: https://coderslegacy.com/python/python-pygame-tutorial/
+# Geändert: Kommentiert
+#           Variablen umbenannt
+#           Bild-Dateien umbenannt
+#           nur die notwendigen Farben definiert
+#           score und speed sind Daten der Gegner-Klasse                      
+#           neue Funktion end_of_game()
+#           der Zusammenstoß wird 5 Sekunden lang angezeigt            
 # Bibliotheken importieren
 import pygame, sys
 import random
@@ -21,6 +23,8 @@ SCREEN_HEIGHT = 600
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED   = (255, 0, 0)
+# Bild für den Hintergrund laden
+background = pygame.image.load("animated_street.png")
 # Schriften definieren
 font_big = pygame.font.SysFont("Verdana", 40)
 font_small = pygame.font.SysFont("Verdana", 20)
@@ -48,7 +52,7 @@ class Player(pygame.sprite.Sprite):
         if self.rect.left > 0:
             if pressed_keys[pygame.K_LEFT]:
                 self.rect.move_ip(-5, 0)
-        if self.rect.right < SCREEN_WIDTH:        
+        if self.rect.right < SCREEN_WIDTH:
             if pressed_keys[pygame.K_RIGHT]:
                 self.rect.move_ip(5, 0)
 # Gegner-Klasse
@@ -110,8 +114,8 @@ while True:
         if event.type == pygame.QUIT:
             # Spiel-Ende
             end_of_game()
-    # Grafik-Fenster auswischen
-    screen.fill(WHITE)
+    # Straße zeichnen
+    screen.blit(background, (0,0))
     # score zeichnen
     E1.draw_score(screen)
     # Spieler und Gegner bewegen und zeichnen
@@ -122,6 +126,8 @@ while True:
         screen.blit(entity.image, entity.rect)
     # Zusammenstoß entdecken
     if pygame.sprite.spritecollideany(P1, enemies):
+        # Sound abspielen
+        pygame.mixer.Sound('crash.wav').play()
         # Zusammenstoß melden
         screen.blit(meldung, (30,250))
         # Grafik-Fenster aktualisieren
