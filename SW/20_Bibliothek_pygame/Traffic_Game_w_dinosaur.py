@@ -1,11 +1,5 @@
 # Quelle: https://coderslegacy.com/python/python-pygame-tutorial/
-# Geändert: Kommentiert
-#           Variablen umbenannt
-#           Bild-Dateien umbenannt
-#           nur die notwendigen Farben definiert
-#           score und speed sind Daten der Gegner-Klasse                      
-#           neue Funktion end_of_game()
-#           der Zusammenstoß wird 5 Sekunden lang angezeigt            
+# Geändert: Ein Dinosaurier überquert die Straße. Das Programm wurde umgebaut. 
 # Bibliotheken importieren
 import pygame, sys
 import random
