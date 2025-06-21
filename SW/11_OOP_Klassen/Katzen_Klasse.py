@@ -1,4 +1,4 @@
-*# Objektorientierte Programmierung
+# Objektorientierte Programmierung
 
 # Klassendefinition
 class BauplanKatzenKlasse():
