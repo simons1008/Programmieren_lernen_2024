@@ -150,7 +150,7 @@ def search_from(maze, start_row, start_col):
         elif cmd == "s":
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
-            print("start_row =", maze.start_row, "start_col =", maze.start_col)
+            print("start_row =", start_row, "start_col =", start_col)
         elif cmd == "e":
             print("Ende - du kannst das Turtle-Fenster jetzt schließen")
         else:
