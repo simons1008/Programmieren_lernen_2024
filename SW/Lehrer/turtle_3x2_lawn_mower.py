@@ -12,7 +12,7 @@ import time
 START = "S"
 OBSTACLE = "+"
 BLANK = " "
-EXIT = "E"
+WATER = "W"
 
 # heading properties
 right_of  = {"up": "right", "down": "left" , "left": "up"  , "right": "down"}
@@ -32,16 +32,16 @@ needle_head_left   = {"odd": "u_turn_left" , "even": "u_turn"      }
 #########################
 ## Meine Einstellungen ##
 # heading
-my_heading = "left"
+my_heading = "up"
 
 # sequence
-my_sequence = needle_head_right
+my_sequence = snake_right
 
 # collision_max
-#collision_max = 28
+collision_max = 28
 #collision_max = 54
 #collision_max = 18
-collision_max = 34
+#collision_max = 34
 ##########################
 
 class Maze:
@@ -81,9 +81,9 @@ class Maze:
                     self.draw_box(
                         col, self.from_bottom(row), "orange"
                     )
-                elif self.maze_list[row][col] == EXIT:
+                elif self.maze_list[row][col] == WATER:
                     self.draw_box(
-                        col, self.from_bottom(row), "green"
+                        col, self.from_bottom(row), "lightblue"
                     )
         self.t.color("black")
         self.t.fillcolor("blue")
@@ -170,6 +170,10 @@ def search_from(maze, start_row, start_col):
             maze.update_position(start_row, start_col)
         # Kollision: Zähler erhöhen
         collision_count += 1
+        # Wasser gefunden?
+        if maze.look_forward(start_row, start_col, heading) == WATER:
+            print("Wasser gefunden!!")
+            break      
         # sequence key bestimmen
         if is_odd(collision_count):
             my_collision = "odd"
@@ -184,6 +188,10 @@ def search_from(maze, start_row, start_col):
             if maze.look_forward(start_row, start_col, heading) == BLANK:
                 start_row, start_col = maze.one_step(start_row, start_col, heading)
                 maze.update_position(start_row, start_col)
+            # Wasser gefunden?
+            if maze.look_forward(start_row, start_col, heading) == WATER:
+                print("Wasser gefunden!!")
+                break      
             # drehen
             heading = maze.turn_right(heading)                  
         elif my_sequence[my_collision] == "u_turn":
@@ -197,6 +205,10 @@ def search_from(maze, start_row, start_col):
             if maze.look_forward(start_row, start_col, heading) == BLANK:
                 start_row, start_col = maze.one_step(start_row, start_col, heading)
                 maze.update_position(start_row, start_col)
+            # Wasser gefunden?
+            if maze.look_forward(start_row, start_col, heading) == WATER:
+                print("Wasser gefunden!!")
+                break      
             # drehen
             heading = maze.turn_left(heading)                  
         else:
