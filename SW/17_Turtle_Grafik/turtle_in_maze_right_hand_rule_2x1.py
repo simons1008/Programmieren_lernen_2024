@@ -147,16 +147,21 @@ def search_from(maze, start_row, start_col):
     turn_count = 1
 
     # Folge der Wand bis Exit
-    while maze.is_exit(start_row, start_col) == False:
+    while True:
         
-        # solange vorne frei und die Wand rechts ist
-        while maze.look_forward(start_row, start_col, heading) == BLANK\
+        # solange kein Exit und vorne frei und die Wand rechts ist
+        while maze.is_exit(start_row, start_col) == False\
+          and maze.look_forward(start_row, start_col, heading) == BLANK\
           and maze.look_right(start_row, start_col, heading) == OBSTACLE:
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
 
+        # wenn Exit dann Schleife abbrechen
+        if maze.is_exit(start_row, start_col) == True:
+            break
+
         # wenn die Wand nicht mehr rechts ist
-        if maze.look_right(start_row, start_col, heading) == BLANK:
+        elif maze.look_right(start_row, start_col, heading) == BLANK:
             # drehen und 1 Schritt vorwärts, damit rechte Hand an der Wand ist
             heading = maze.turn_right(heading)
             turn_count += 1
