@@ -145,7 +145,8 @@ def search_from(maze, start_row, start_col):
 
         # solange vorne frei ist
         print("turn_level =", turn_level)
-        while maze.look_forward(start_row, start_col, heading) == BLANK:
+        while maze.is_exit(start_row, start_col) == False\
+          and maze.look_forward(start_row, start_col, heading) == BLANK:
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
         # drehen, damit rechte Hand an der Wand ist
@@ -153,18 +154,27 @@ def search_from(maze, start_row, start_col):
         turn_count += 1
         turn_level += 1
 
-        # Folge der Wand bis Exit oder Drehungs-Level gleich Null
-        while maze.is_exit(start_row, start_col) == False and turn_level != 0:
+        # wenn Exit, dann Schleife abbrechen
+        if maze.is_exit(start_row, start_col) == True:
+            break
 
-            # solange vorne frei und die Wand rechts ist
+        # Folge der Wand gleich Null
+        while turn_level != 0:
+
+            # solange kein Exit und vorne frei und die Wand rechts ist
             print("turn_level =", turn_level)
-            while maze.look_forward(start_row, start_col, heading) == BLANK\
+            while maze.is_exit(start_row, start_col) == False\
+              and maze.look_forward(start_row, start_col, heading) == BLANK\
               and maze.look_right(start_row, start_col, heading) == OBSTACLE:
                 start_row, start_col = maze.one_step(start_row, start_col, heading)
                 maze.update_position(start_row, start_col)
 
+            # wenn Exit, dann Schleife abbrechen
+            if maze.is_exit(start_row, start_col) == True:
+                break
+
             # wenn die Wand nicht mehr rechts ist
-            if maze.look_right(start_row, start_col, heading) == BLANK:
+            elif maze.look_right(start_row, start_col, heading) == BLANK:
                 # drehen und 1 Schritt vorwärts, damit rechte Hand an der Wand ist
                 heading = maze.turn_right(heading)
                 turn_count += 1
