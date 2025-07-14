@@ -156,7 +156,7 @@ def search_from(maze, start_row, start_col):
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
 
-        # wenn Exit dann Schleife abbrechen
+        # wenn Exit, dann Schleife abbrechen
         if maze.is_exit(start_row, start_col) == True:
             break
 
