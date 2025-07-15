@@ -16,6 +16,7 @@ import time
 START = "S"
 OBSTACLE = "+"
 BLANK = " "
+EXIT = "E"
 
 # heading properties
 right_of  = {"up": "right", "down": "left" , "left": "up"  , "right": "down"}
@@ -41,7 +42,6 @@ class Maze:
                     self.start_col = col
                     break
 
-        self.y_translate = self.rows_in_maze - 1
         self.t = turtle.Turtle()
         self.t.shape("turtle")
         self.wn = turtle.Screen()
@@ -108,7 +108,11 @@ class Maze:
         return heading
 
     def look_forward(self, start_row, start_col, heading):
-        return self.maze_list[start_row + delta_row[heading]]\
+        # im Exit nicht nach vorne schauen!
+        if self.is_exit(start_row, start_col) == True:
+            return EXIT
+        else:
+            return self.maze_list[start_row + delta_row[heading]]\
                              [start_col + delta_col[heading]]
 
     def look_right(self, start_row, start_col, heading):
@@ -136,9 +140,8 @@ def search_from(maze, start_row, start_col):
     maze.t.down()
     heading = maze.init_search()
 
-    # solange kein Exit und vorne frei ist
-    while maze.is_exit(start_row, start_col) == False\
-      and maze.look_forward(start_row, start_col, heading) == BLANK:
+    # solange vorne frei ist
+    while maze.look_forward(start_row, start_col, heading) == BLANK:
         start_row, start_col = maze.one_step(start_row, start_col, heading)
         maze.update_position(start_row, start_col)
     # drehen, damit rechte Hand an der Wand ist
@@ -156,8 +159,12 @@ def search_from(maze, start_row, start_col):
             start_row, start_col = maze.one_step(start_row, start_col, heading)
             maze.update_position(start_row, start_col)
 
+        # wenn Exit, dann Schleife abbrechen
+        if maze.is_exit(start_row, start_col) == True:
+            break
+
         # wenn die Wand nicht mehr rechts ist
-        if maze.look_right(start_row, start_col, heading) == BLANK:
+        elif maze.look_right(start_row, start_col, heading) == BLANK:
             # drehen und 1 Schritt vorwärts, damit rechte Hand an der Wand ist
             heading = maze.turn_right(heading)
             turn_count += 1
