@@ -10,6 +10,7 @@ import turtle
 START = "S"
 OBSTACLE = "+"
 BLANK = " "
+EXIT = "E"
 # Richtungs-Eigenschaften
 right_of  = {"up": "right", "down": "left" , "left": "up"  , "right": "down"}
 left_of   = {"up": "left" , "down": "right", "left": "down", "right": "up"  }
@@ -89,6 +90,15 @@ class Maze:
         if val:
             self.maze_list[row][col] = val
         self.move_turtle(col, self.from_bottom(row))
+    # Exit erreicht?
+    def is_exit(self, row, col):
+        return (
+            row == 0
+            or row == self.rows_in_maze - 1
+            or col == 0
+            or col == self.columns_in_maze - 1
+        )
+
     # Geschwindigkeit und Richtung der Schildkröte, Richtung des Roboters festlegen
     def init_search(self):
         self.t.speed(3)
@@ -97,7 +107,11 @@ class Maze:
         return heading
     # schau nach vorne
     def look_forward(self, start_row, start_col, heading):
-        return self.maze_list[start_row + delta_row[heading]]\
+        # im Exit nicht nach vorne schauen!
+        if self.is_exit(start_row, start_col) == True:
+            return EXIT
+        else:
+            return self.maze_list[start_row + delta_row[heading]]\
                              [start_col + delta_col[heading]]
     # schau nach rechts
     def look_right(self, start_row, start_col, heading):
