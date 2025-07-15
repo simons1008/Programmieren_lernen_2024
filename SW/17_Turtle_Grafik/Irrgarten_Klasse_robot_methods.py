@@ -98,7 +98,6 @@ class Maze:
             or col == 0
             or col == self.columns_in_maze - 1
         )
-
     # Geschwindigkeit und Richtung der Schildkröte, Richtung des Roboters festlegen
     def init_search(self):
         self.t.speed(3)
