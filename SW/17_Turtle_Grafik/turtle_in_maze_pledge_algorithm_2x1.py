@@ -191,8 +191,6 @@ def search_from(maze, start_row, start_col):
                 heading = maze.turn_left(heading)
                 turn_count += 1
                 turn_level += 1
-        # Ende der inneren while-Schleife
-        
     # Ende äußeren while-Schleife
     print("Exit found!")
     print(turn_count, "Drehungen")
