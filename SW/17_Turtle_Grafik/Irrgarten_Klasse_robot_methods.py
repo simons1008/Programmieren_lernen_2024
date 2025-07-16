@@ -148,7 +148,11 @@ def search_from(maze, start_row, start_col):
         while cmd == "":
             cmd = input("Kommando v[orne], h[and], l[inks], r[rechts], s[chritt, e[nde] ")
         print("Kommando =", cmd)
-        if cmd == "v":
+        if maze.is_exit(start_row, start_col) == True:
+            print("Turtle im Exit!")
+            print("Ende - du kannst das Turtle-Fenster jetzt schließen")
+            break            
+        elif cmd == "v":
             ch = maze.look_forward(start_row, start_col, heading)
             print(ch)
         elif cmd == "h":
