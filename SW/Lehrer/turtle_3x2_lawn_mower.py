@@ -1,10 +1,14 @@
-# Der Roboter soll die ganze Fläche abfahren und dabei doppelte Wege vermeiden
+# Der Roboter soll jeden Punkt der Fläche erreichen
+# Der Roboter soll möglichst wenig doppelte Wege machen
 # Die Darstellung "Roboter fährt - Turtle folgt" basiert auf der Quelle:  
 # https://runestone.academy/ns/books/published/pythonds3/Recursion/ExploringaMaze.html
 # Die "heading properties" werden durch Dictionarys angegeben. Quelle:
 # https://gist.github.com/maxrothman/92eb8470408a047b1f6815a4a444d727
 # Das Abfahren der Fläche in Streifen wurde hier vorgeschlagen:
 # http://allegrobotics.com/mowingAlgorithm.html
+# Die Turtle-Ausrichtung wird durch das Dictionary "angle_of" bestimmt
+# Die Bewegung des Roboters wird durch das Dictionary "sequences" vorgegeben
+# Ende der Suche bei WATER oder EXIT
 
 import turtle
 import time
@@ -12,6 +16,7 @@ import time
 START = "S"
 OBSTACLE = "+"
 BLANK = " "
+EXIT = "E"
 WATER = "W"
 
 # heading properties
@@ -19,6 +24,7 @@ right_of  = {"up": "right", "down": "left" , "left": "up"  , "right": "down"}
 left_of   = {"up": "left" , "down": "right", "left": "down", "right": "up"  }
 delta_row = {"up": -1     , "down": 1      , "left": 0     , "right": 0     }
 delta_col = {"up": 0      , "down": 0      , "left": -1    , "right": 1     }
+angle_of  = {"up": 90     , "down": -90    , "left": 180   , "right": 0     }
 
 # sequences
 snake_right        = {"odd": "u_turn_right", "even": "u_turn_left" }
@@ -36,12 +42,6 @@ my_heading = "up"
 
 # sequence
 my_sequence = snake_right
-
-# collision_max
-collision_max = 28
-#collision_max = 54
-#collision_max = 18
-#collision_max = 34
 ##########################
 
 class Maze:
@@ -116,22 +116,25 @@ class Maze:
             self.maze_list[row][col] = val
         self.move_turtle(col, self.from_bottom(row))
 
+    def is_exit(self, row, col):
+        return (
+            row == 0
+            or row == self.rows_in_maze - 1
+            or col == 0
+            or col == self.columns_in_maze - 1
+        )
+
     def adjust_turtle(self, heading):
         self.t.speed(10)
         # adjust turtle
-        if heading == "up":        
-            self.t.setheading(90)
-        elif heading == "down":
-            self.t.setheading(-90)
-        elif heading == "left":
-            self.t.setheading(180)
-        elif heading == "right":
-            self.t.setheading(0)
-        else:
-            print("ERROR: unsupported heading")
+        self.t.setheading(angle_of[heading])
 
     def look_forward(self, start_row, start_col, heading):
-        return self.maze_list[start_row + delta_row[heading]]\
+        # im Exit nicht nach vorne schauen!
+        if self.is_exit(start_row, start_col) == True:
+            return EXIT
+        else:
+            return self.maze_list[start_row + delta_row[heading]]\
                              [start_col + delta_col[heading]]
 
     def one_step(self, start_row, start_col, heading):
@@ -158,12 +161,12 @@ def search_from(maze, start_row, start_col):
     maze.t.down()
     # Roboter-Ausrichtung
     heading = my_heading
-    # Turtle-Ausrichung
+    # Turtle-Ausrichtung
     maze.adjust_turtle(heading)
     # Kollisions-Zähler
     collision_count = 0
 
-    while True:
+    while maze.is_exit(start_row, start_col) == False:
         # solange vorne frei ist
         while maze.look_forward(start_row, start_col, heading) == BLANK:
             start_row, start_col = maze.one_step(start_row, start_col, heading)
@@ -174,6 +177,10 @@ def search_from(maze, start_row, start_col):
         if maze.look_forward(start_row, start_col, heading) == WATER:
             print("Wasser gefunden!!")
             break      
+        # Exit erreicht?
+        elif maze.is_exit(start_row, start_col) == True:
+            break
+
         # sequence key bestimmen
         if is_odd(collision_count):
             my_collision = "odd"
@@ -213,9 +220,6 @@ def search_from(maze, start_row, start_col):
             heading = maze.turn_left(heading)                  
         else:
             print("ERROR: unsupported sequence value")
-        # Ende erreicht?
-        if collision_count > collision_max:
-            break
     # Ende der while-Schleife
     print("Ende erreicht!")
     print(collision_count, "Kollisionen")
