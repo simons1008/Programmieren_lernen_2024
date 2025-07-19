@@ -225,7 +225,7 @@ def search_from(maze, start_row, start_col):
     print(collision_count, "Kollisionen")
 
 
-my_maze = Maze("maze5.txt")
+my_maze = Maze("lawn5.txt")
 my_maze.draw_maze()
 my_maze.t.home()
 search_from(my_maze, my_maze.start_row, my_maze.start_col)
