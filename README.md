@@ -3,9 +3,9 @@
 Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 9. 
 
 ## Typischer Ablauf einer Kurseinheit
-1. Der Lehrer stellt das neue vor Thema und demonstriert den Programmcode auf seinem PC. 
+1. Der Lehrer stellt das neue Thema vor und demonstriert den Programmcode auf seinem PC. 
 2. Die Schülerinnen und Schüler experimentieren mit dem Programmcode auf ihren PCs.  
-3. Es wird einen Zeit reserviert, in der selbstständig Aufgaben gelöste werden sollen.   
+3. Es wird einen Zeit reserviert, in der selbstständig Aufgaben gelöst werden sollen.   
 4. Zum Schluss demonstriert der Lehrer eine Anwendung auf seinem PC, z. B. ein Computerspiel.  
 
 ## Ordner Doc
