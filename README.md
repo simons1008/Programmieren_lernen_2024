@@ -1,26 +1,25 @@
 # Programmieren lernen mit Python IDLE
 
-Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 8. 
+Dieser Programmierkurs richtet sich an Schülerinnen und Schüler ab Klasse 9. 
 
 ## Typischer Ablauf einer Kurseinheit
-1. Der Lehrer gibt eine Einführung in das Thema und demonstriert den Programmcode auf seinem PC. 
-2. Auf den PCs der Schülerinnen und Schüler liegt der Programmcode. Dazu erhalten sie ein Arbeitsblatt.  
-3. Die Schülerinnen und Schüler lösen selbstständig die Aufgaben auf dem Arbeitsblatt.  
-4. Abschließend werden die Lösungen besprochen.  
+1. Der Lehrer stellt das neue vor Thema und demonstriert den Programmcode auf seinem PC. 
+2. Die Schülerinnen und Schüler experimentieren mit dem Programmcode auf ihren PCs.  
+3. Es wird einen Zeit reserviert, in der selbstständig Aufgaben gelöste werden sollen.   
+4. Zum Schluss demonstriert der Lehrer eine Anwendung auf seinem PC, z. B. ein Computerspiel.  
 
 ## Ordner Doc
 
 | Inhalt                           | Datei .docx .pdf                               |
 | -------------------------------- | ---------------------------------------------- |
 | Inhaltsübersicht 	               | Doc/Inhalt_Programmierkurs                     |
-| Arbeitsblätter                   | Doc/Arbeitsblaetter_2025                       |
-| Handbuch für Fortgeschrittene    | Doc/Programmieren_lernen_2025                  |
-| Aufgaben für Fortgeschrittene    | Doc/Aufgaben_2025                              |
+| Handbuch für Fortgeschrittene    | Doc/Programmieren_lernen_2024                  |
+| Aufgaben für Fortgeschrittene    | Doc/Aufgaben_2024                              |
 | Anleitungen                      | Doc/Dateipfad_aendern                          | 
 |                                  | bis                                            |
 |                                  | Doc/tensorflow_installieren                    |
 
-> Arbeitsblätter und Handbuch nennen auf den letzten Seiten alle Quellen des Kurses.
+> Das und Handbuch nennt auf den letzten Seiten alle Quellen des Kurses.
 
 ## Ordner SW
 
