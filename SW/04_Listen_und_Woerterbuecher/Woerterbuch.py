@@ -1,4 +1,4 @@
-# Korrektes Wörterbuch Englisch - Deutsch
+# Wörterbuch Englisch - Deutsch
 
 # Ein leeres Wörterbuch hat keinen Inhalt
 englisch_deutsch = {}
