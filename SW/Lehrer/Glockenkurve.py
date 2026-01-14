@@ -30,8 +30,8 @@ maximum = stats.norm.pdf(mu, mu, sigma)
 wendestelle_1 = stats.norm.pdf(mu-sigma, mu, sigma)
 wendestelle_2 = stats.norm.pdf(mu+sigma, mu, sigma)
 print("maximum bei mu = {:5.3f} hat den Wert {:5.3f}".format(mu, maximum))
-print("wendestelle_1 bei mu-sigma = {:5.3f} den Wert {:5.3f}".format(mu-sigma, wendestelle_1))
-print("wendestelle_2 bei mu+sigma = {:5.3f} den Wert {:5.3f}".format(mu+sigma, wendestelle_2))
+print("wendestelle_1 bei mu-sigma = {:5.3f} hat den Wert {:5.3f}".format(mu-sigma, wendestelle_1))
+print("wendestelle_2 bei mu+sigma = {:5.3f} hat den Wert {:5.3f}".format(mu+sigma, wendestelle_2))
 
 # Teilaufgabe c) 
 # Intervall mu - 3*sigma, mu + 3*sigma, Datentyp: numpy.ndarray
