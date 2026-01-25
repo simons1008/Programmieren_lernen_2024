@@ -3,8 +3,8 @@
 # Seite 363 Beispiel verallgemeinert
 
 # Bibliothek importierten
-# P(X = x):  pdf(x, loc=0, scale=1)
-# P(X <= x): cdf(x, loc=0, scale=1)
+# Dichtefunktion(x):  pdf(x, loc=0, scale=1)
+# P(X <= x):          cdf(x, loc=0, scale=1)
 # loc is mean and scale is standard deviation
 import matplotlib.pyplot as plt
 import numpy as np
@@ -36,7 +36,7 @@ print("wendestelle_2 bei mu+sigma = {:5.3f} hat den Wert {:5.3f}".format(mu+sigm
 # Teilaufgabe c) 
 # Intervall mu - 3*sigma, mu + 3*sigma, Datentyp: numpy.ndarray
 x = np.linspace(mu - 3*sigma, mu + 3*sigma)
-# Wahrscheinlichkeitsdichte für die Masse, Datentyp: numpy.ndarray 
+# Dichtefunktion, Datentyp: numpy.ndarray 
 phi = stats.norm.pdf(x, mu, sigma)
 
 # Normalverteilung plotten
