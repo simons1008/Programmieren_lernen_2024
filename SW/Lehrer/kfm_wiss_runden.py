@@ -7,13 +7,14 @@
 radius = 41
 distance = radius/10
 # Überschrift
-print("i  orig  kfm  wiss")
+print("i  orig  cut  kfm  wiss")
 # Faktoren
 factors = [0, 3, 5, 7, 9]
 
 # Tabelle drucken
 for i in factors:
     orig = distance * i
+    cut = int(orig)
     kfm = int(orig + 0.5)
     wiss = round(orig)
-    print(f"{i}  {orig:4.1f}   {kfm:2d}    {wiss:2d}")
+    print(f"{i}  {orig:4.1f}   {cut:2d}   {kfm:2d}    {wiss:2d}")
