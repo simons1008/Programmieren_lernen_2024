@@ -34,8 +34,8 @@ P = binom.pmf(X, n, p)
 # Tabelle drucken
 print("Wahrscheinlichkeitsverteilung")
 print("X     P")
-for x, p in zip(X, P):
-    print("{:5.3f} {:5.3f}".format(x, p))
+for x, px in zip(X, P):
+    print("{:5.3f} {:5.3f}".format(x, px))
 
 # Histogramm plotten
 plt.bar(X, P, width=1)
