@@ -41,6 +41,10 @@ phi = stats.norm.pdf(x, mu, sigma)
 
 # Normalverteilung plotten
 plt.plot(x, phi)
+my_title = "Glockenkurve mit mu = {:5.1f} und sigma = {:5.1f}".format(mu, sigma)
+plt.title(my_title)
 plt.xlabel("x")
 plt.ylabel("phi")
+plt.axvline(x = mu - sigma, color = "k", linestyle = "--")
+plt.axvline(x = mu + sigma, color = "k", linestyle = "--")
 plt.show()
