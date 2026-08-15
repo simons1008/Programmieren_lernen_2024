@@ -121,7 +121,7 @@ if __name__ == "__main__":
         n=10,
         output_dir="test_patterns",
         n_rings=5,
-        size=512,
+        size=210,
         allow_repeats=True,
         seed=42,
     )
