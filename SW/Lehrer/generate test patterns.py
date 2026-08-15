@@ -15,12 +15,12 @@ from PIL import Image, ImageDraw
 
 # Referenz-Farbpalette (RGB) - kann erweitert/angepasst werden
 DEFAULT_PALETTE = {
-    "green":  (46, 139, 60),
-    "black":  (20, 20, 20),
-    "red":    (191, 60, 70),
-    "blue":   (80, 150, 200),
-    "yellow": (240, 200, 40),
-    "white":  (245, 245, 245),
+    "green":  (0, 255, 0),
+    "black":  (0, 0, 0),
+    "red":    (255, 0, 0),
+    "blue":   (0, 255, 255),
+    "yellow": (255, 255, 0),
+    "white":  (255, 255, 255),
 }
 
 
